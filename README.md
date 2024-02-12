@@ -1,3 +1,10 @@
+![login](https://github.com/edwin659898/jobcardkiambere/assets/62498603/d480d03e-6a52-40cf-84e0-a7526c535658)
+
+![dashboard](https://github.com/edwin659898/jobcardkiambere/assets/62498603/19014da1-03fd-44b2-8c19-ce0b363ba8f4)
+
+
+![occourence](https://github.com/edwin659898/jobcardkiambere/assets/62498603/87e3e2ca-3688-45d0-b1d1-850f9b75e15a)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
