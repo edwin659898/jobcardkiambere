@@ -64,7 +64,8 @@
                                                         <tr>
                                                             <th>ID</th>
                                                             <th>Name</th>
-                                                            <th>Description</th>
+                                                            <th>Mode of Transport</th>
+                                                            <th>Registration</th>
                                                             <th>Site</th>
                                                             <th>Action</th>
                                                         </tr>
@@ -72,6 +73,7 @@
                                                     <tbody v-for="$media in TransportMedias.data" :key="$media.id">
                                                         <tr>
                                                             <td>{{ $media.id }}</td>
+                                                            <td>{{ $media.transport }}</td>
                                                             <td>{{ $media.name }}</td>
                                                             <td>{{ $media.description }}</td>
                                                             <td>{{ $media.site }}</td>
@@ -118,19 +120,22 @@
                                 <!-- the events -->
                                 <div class="pt-3">
                                     <label class="block mb-2 text-sm font-medium">Name</label>
-                                    <select v-model="form.name"
+                                    <input type="text" v-model="form.transport"
                                         class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                        placeholder="Role in Caps" required>
-                                        <option value="Motor Bike">Motor Bike</option>
-                                        <option value="Worker">Worker</option>
-                                        <option value="Vehicle">Vehicle</option>
-                                        <option value="cart">Donkey Cart</option>
-                                    </select>
+                                        placeholder="NAME OF THE PERSON" required>
+                                </div>
+                                <div class="pt-3">
+                                    <label class="block mb-2 text-sm font-medium">Mode of Transport</label>
+                                    <!-- <select v-model="form.name" -->
+                                        <input type="text" v-model="form.name"
+                                        class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        placeholder="Donkey Cart/Motor Bike/Vehicle/Worker" required>
+                                    <!-- </select> -->
                                 </div>
                                 <div class="text-xs text-red-600 mt-1" v-if="form.errors.name">{{ form.errors.name }}
                                 </div>
                                 <div class="pt-3">
-                                    <label class="block mb-2 text-sm font-medium">Description</label>
+                                    <label class="block mb-2 text-sm font-medium">Registration</label>
                                     <input type="text" v-model="form.description"
                                         class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                         placeholder="KCH 008H" required>
@@ -192,6 +197,7 @@ export default {
         return {
             isOpen: false,
             form: this.$inertia.form({
+                transport: null,
                 name: null,
                 description: null,
                 site: null,
@@ -207,6 +213,7 @@ export default {
         },
         createMedia() {
             this.form.post('/create-media', {
+                onSuccess: () => form.reset('transport'),
                 onSuccess: () => form.reset('name'),
                 onSuccess: () => form.reset('description','site'),
                 onSuccess: () => this.closeModal(),

@@ -143,6 +143,22 @@
                                                                             <label class="mt-2 text-sm font-bold">{{
                                                                                     $role.role
                                                                             }}</label>
+
+                                                                            <select v-model="form.site"
+                                        class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        placeholder="Select your role and Tick the box" required>
+                                        <option value="Managing Director">Managing Director</option>
+                                        <option value="Executive Director Forestry">Executive Director Forestry</option>
+                                        <option value="System & Administration Manager">System & Administration Manager</option>
+                                        <option value="Site Managr Dokolo">Site Managr Dokolo</option>
+                                        <option value="Site Manager Farmers program 7 F">Site Manager Farmers program 7 F</option>
+                                        <option value="Farmers BO & Contracting Manager">Farmers BO & Contracting Manager</option>
+                                        <option value="Monitoring and Evaluation Manager">Monitoring and Evaluation Manager</option>
+                                        <option value="Monitoring and Evaluation Officer">Monitoring and Evaluation Officer</option>
+                                        <option value="Information & Security officer">Information & Security officer</option>
+                                        <option value="Agro-Forestry Agents">Agro-Forestry Agents</option>
+                                    </select>
+                                                                
                                                                         </div>
                                                                     </div>
                                                                 </div>

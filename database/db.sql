@@ -2502,6 +2502,7 @@ INSERT INTO `trees` (`id`, `tree_number`, `location`, `created_at`, `updated_at`
 
 CREATE TABLE `trucks` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `transport` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL, 
   `truck_number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `site` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,

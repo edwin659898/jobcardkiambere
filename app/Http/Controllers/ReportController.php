@@ -60,7 +60,7 @@ class ReportController extends Controller
             });
         }]);
 
-        return Inertia::render('Report/'.$parent_activity->report_template_name, [
+        return Inertia::render('Report/GeneretedReport', [
             'JobCard' => $jobcard,
             'ParentActivity' => $parent_activity,
             'Trees' => $trees,

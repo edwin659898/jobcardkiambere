@@ -15,6 +15,7 @@ class TransportController extends Controller
             ->withQueryString()
             ->through(fn ($truck) => [
                 'id' => $truck->id,
+                'transport' => $truck->transport,
                 'name' => $truck->truck_number,
                 'description' => $truck->description,
                 'site' => $truck->site,
@@ -28,12 +29,14 @@ class TransportController extends Controller
     public function create(Request $request)
     {
         $request->validate([
+            'transport' => 'required',
             'name' => 'required',
             'site' => 'required',
             'description' => 'required',
         ]);
 
         Truck::create([
+            'transport' => $request->transport,
             'truck_number' => $request->name,
             'description' => $request->description,
             'site' => $request->site,

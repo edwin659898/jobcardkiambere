@@ -68,6 +68,7 @@
                                                         <tr>
                                                             <th>ID</th>
                                                             <th>Activity Name</th>
+                                                            <th>Title</th>
                                                             <th>Roles</th>
                                                             <th>Action</th>
                                                         </tr>
@@ -77,6 +78,11 @@
                                                         <tr>
                                                             <td>{{ index + 1 }}</td>
                                                             <td>{{ activity.name }}</td>
+                                                            <td>
+                                                                <li v-for="$role in activity.roles" :key="$role.id">
+                                                                    {{ $role.role }}
+                                                                </li>
+                                                            </td>
                                                             <td>
                                                                 <li v-for="$role in activity.roles" :key="$role.id">
                                                                     {{ $role.role }}

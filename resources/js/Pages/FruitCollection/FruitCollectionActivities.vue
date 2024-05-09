@@ -1,6 +1,8 @@
 <template>
 
     <Head title="Operational Planning" />
+    
+    <!-- FRUITCOLLECTION-Activity KIAMBERE -->
 
     <BreezeAuthenticatedLayout>
         <div class="content-wrapper">

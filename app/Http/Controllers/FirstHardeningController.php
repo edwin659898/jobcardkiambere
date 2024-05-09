@@ -32,9 +32,9 @@ class FirstHardeningController extends Controller
     {
         Session::put('current_activity_id', $id);
         $child = ChildActivity::findOrFail($id);
-        $user_roles = auth()->user()->roles()->pluck('role')->toArray();
+        // $user_roles = auth()->user()->roles()->pluck('role')->toArray();
         $activity_role = $child->roles()->pluck('role')->toArray();
-        abort_unless(count(array_intersect($user_roles, $activity_role)) > 0, 403);
+        // abort_unless(count(array_intersect($user_roles, $activity_role)) > 0, 403);
         $parent = $child->parent;
         $currentCard = JobCard::all();
 
