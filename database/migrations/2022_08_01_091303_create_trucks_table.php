@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('trucks', function (Blueprint $table) {
             $table->id();
+            $table->string('transport');
             $table->string('truck_number');
             $table->string('description');
             $table->string('site');

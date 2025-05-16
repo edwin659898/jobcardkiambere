@@ -480,7 +480,10 @@ class FruitCollectionController extends Controller
 //         ]);
 //     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
 //     public function updateTruckDepartureTime(Request $request)
 //     {
 //         $data = $request->validate([

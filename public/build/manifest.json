@@ -4,13 +4,22 @@
     "src": "resources/js/Pages/Report/Index.css"
   },
   "resources/js/app.css": {
+<<<<<<< HEAD
     "file": "assets/app-ef409906.css",
+=======
+    "file": "assets/app-c5eb0b7a.css",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "src": "resources/js/app.css"
+  },
+  "resources/js/Pages/Report/Index.css": {
+    "file": "assets/Index-59033b27.css",
+    "src": "resources/js/Pages/Report/Index.css"
   },
   "main.css": {
     "file": "assets/main-77ebf614.css",
     "src": "main.css"
   },
+<<<<<<< HEAD
   "resources/js/Pages/FruitCollection/FruitCollectionActivities.vue": {
     "file": "assets/FruitCollectionActivities-adc934ad.js",
     "src": "resources/js/Pages/FruitCollection/FruitCollectionActivities.vue",
@@ -26,10 +35,28 @@
   },
   "_Record-30107ea8.js": {
     "file": "assets/Record-30107ea8.js",
+=======
+  "resources/js/Pages/Auth/ResetPassword.vue": {
+    "file": "assets/ResetPassword-1456e37b.js",
+    "src": "resources/js/Pages/Auth/ResetPassword.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GuestLayout-b84153cf.js",
+      "_TextInput-e749a47d.js",
+      "_PrimaryButton-03216885.js",
+      "_ApplicationLogo-c4abd6a2.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "_TextInput-e749a47d.js": {
+    "file": "assets/TextInput-e749a47d.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "imports": [
       "resources/js/app.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Depulping/DistributionDepulpAndDry.vue": {
     "file": "assets/DistributionDepulpAndDry-11af6499.js",
     "src": "resources/js/Pages/Depulping/DistributionDepulpAndDry.vue",
@@ -86,20 +113,85 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Potting/PottingActivities.vue": {
+    "file": "assets/PottingActivities-19140b32.js",
+    "src": "resources/js/Pages/Potting/PottingActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/Dashboard.vue": {
+    "file": "assets/Dashboard-4b3be15d.js",
+    "src": "resources/js/Pages/Dashboard.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ForgotPassword.vue": {
+    "file": "assets/ForgotPassword-c61e4a83.js",
+    "src": "resources/js/Pages/Auth/ForgotPassword.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GuestLayout-b84153cf.js",
+      "_TextInput-e749a47d.js",
+      "_PrimaryButton-03216885.js",
+      "_ApplicationLogo-c4abd6a2.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/OperationPlanning/Table.vue": {
+    "file": "assets/Table-2b7e8ec7.js",
+    "src": "resources/js/Pages/OperationPlanning/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/FruitStorage/Disinfection.vue": {
+    "file": "assets/Disinfection-18873ad4.js",
+    "src": "resources/js/Pages/FruitStorage/Disinfection.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/Potting/PottingActivities.vue": {
     "file": "assets/PottingActivities-d2face6a.js",
     "src": "resources/js/Pages/Potting/PottingActivities.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/FruitCollection/PlanApproval.vue": {
+    "file": "assets/PlanApproval-079d5e2c.js",
+    "src": "resources/js/Pages/FruitCollection/PlanApproval.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Auth/ConfirmPassword.vue": {
     "file": "assets/ConfirmPassword-407c5381.js",
     "src": "resources/js/Pages/Auth/ConfirmPassword.vue",
@@ -141,6 +233,44 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "_GuestLayout-b84153cf.js": {
+    "file": "assets/GuestLayout-b84153cf.js",
+    "imports": [
+      "_ApplicationLogo-c4abd6a2.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/FirstHardening/Table.vue": {
+    "file": "assets/Table-cb1ef0b7.js",
+    "src": "resources/js/Pages/FirstHardening/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ConfirmPassword.vue": {
+    "file": "assets/ConfirmPassword-d3eef454.js",
+    "src": "resources/js/Pages/Auth/ConfirmPassword.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GuestLayout-b84153cf.js",
+      "_TextInput-e749a47d.js",
+      "_PrimaryButton-03216885.js",
+      "_ApplicationLogo-c4abd6a2.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Communication/Communication-activities.vue": {
+    "file": "assets/Communication-activities-e9178c43.js",
+    "src": "resources/js/Pages/Communication/Communication-activities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
@@ -148,12 +278,24 @@
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "_PrimaryButton-fa14051e.js": {
     "file": "assets/PrimaryButton-fa14051e.js",
+=======
+  "resources/js/Pages/FirstHardening/AllOtherActivities.vue": {
+    "file": "assets/AllOtherActivities-db0cd28c.js",
+    "src": "resources/js/Pages/FirstHardening/AllOtherActivities.vue",
+    "isDynamicEntry": true,
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "imports": [
-      "resources/js/app.js"
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/FruitStorage/FruitStorageActivities.vue": {
     "file": "assets/FruitStorageActivities-4b2c7dae.js",
     "src": "resources/js/Pages/FruitStorage/FruitStorageActivities.vue",
@@ -167,9 +309,16 @@
   "resources/js/Pages/Auth/VerifyEmail.vue": {
     "file": "assets/VerifyEmail-30f27858.js",
     "src": "resources/js/Pages/Auth/VerifyEmail.vue",
+=======
+  "resources/js/Pages/FruitCollection/QualityCheck.vue": {
+    "file": "assets/QualityCheck-a895cdfe.js",
+    "src": "resources/js/Pages/FruitCollection/QualityCheck.vue",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "isDynamicEntry": true,
     "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
+<<<<<<< HEAD
       "_GuestLayout-de993a10.js",
       "_PrimaryButton-fa14051e.js",
       "_ApplicationLogo-57629d55.js",
@@ -178,11 +327,26 @@
   },
   "_ApplicationLogo-57629d55.js": {
     "file": "assets/ApplicationLogo-57629d55.js",
-    "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
-      "resources/js/app.js"
+=======
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/NurseryShed/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-8e57f222.js",
+    "src": "resources/js/Pages/NurseryShed/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/FirstHardening/FirstHardeningActivities.vue": {
     "file": "assets/FirstHardeningActivities-0d2b4b2b.js",
     "src": "resources/js/Pages/FirstHardening/FirstHardeningActivities.vue",
@@ -225,12 +389,56 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/FruitCollection/NurseryTransport.vue": {
+    "file": "assets/NurseryTransport-82b4070f.js",
+    "src": "resources/js/Pages/FruitCollection/NurseryTransport.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/OperationPlanning/new-job-card.vue": {
+    "file": "assets/new-job-card-ff0cffa2.js",
+    "src": "resources/js/Pages/OperationPlanning/new-job-card.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Potting/ArrangingPots.vue": {
+    "file": "assets/ArrangingPots-e2d2cd41.js",
+    "src": "resources/js/Pages/Potting/ArrangingPots.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/NurseryShed/NurseryShedActivities.vue": {
+    "file": "assets/NurseryShedActivities-b4fd79bf.js",
+    "src": "resources/js/Pages/NurseryShed/NurseryShedActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/FruitStorage/StorageAfterDisinfection.vue": {
     "file": "assets/StorageAfterDisinfection-9870a67d.js",
     "src": "resources/js/Pages/FruitStorage/StorageAfterDisinfection.vue",
@@ -272,10 +480,44 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Depulping/NutStorage.vue": {
+    "file": "assets/NutStorage-15f6ee55.js",
+    "src": "resources/js/Pages/Depulping/NutStorage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/FruitStorage/Edit-job-card.vue": {
+    "file": "assets/Edit-job-card-1336f416.js",
+    "src": "resources/js/Pages/FruitStorage/Edit-job-card.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Depulping/Table.vue": {
+    "file": "assets/Table-fd0a4ae2.js",
+    "src": "resources/js/Pages/Depulping/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Potting/MaterialAcquisition.vue": {
     "file": "assets/MaterialAcquisition-9523a2b1.js",
     "src": "resources/js/Pages/Potting/MaterialAcquisition.vue",
@@ -294,15 +536,49 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/NurseryShed/SiteIdentification.vue": {
+    "file": "assets/SiteIdentification-da9714ac.js",
+    "src": "resources/js/Pages/NurseryShed/SiteIdentification.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "_ApplicationLogo-c4abd6a2.js": {
+    "file": "assets/ApplicationLogo-c4abd6a2.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/FirstHardening/FirstHardeningActivities.vue": {
+    "file": "assets/FirstHardeningActivities-27555d49.js",
+    "src": "resources/js/Pages/FirstHardening/FirstHardeningActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Auth/ForgotPassword.vue": {
     "file": "assets/ForgotPassword-7a2a101d.js",
     "src": "resources/js/Pages/Auth/ForgotPassword.vue",
+=======
+  "resources/js/Pages/OperationPlanning/determine-objective.vue": {
+    "file": "assets/determine-objective-27b5a88a.js",
+    "src": "resources/js/Pages/OperationPlanning/determine-objective.vue",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "isDynamicEntry": true,
     "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
       "_GuestLayout-de993a10.js",
       "_TextInput-0998d268.js",
@@ -311,6 +587,7 @@
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "_GuestLayout-de993a10.js": {
     "file": "assets/GuestLayout-de993a10.js",
     "imports": [
@@ -322,12 +599,17 @@
     "file": "assets/Potting-3488535c.js",
     "src": "resources/js/Pages/Report/Potting.vue",
     "isDynamicEntry": true,
+=======
+  "_Authenticated-6ca149e0.js": {
+    "file": "assets/Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "imports": [
       "_Authenticated-b2c6d4a9.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/NurseryShed/SiteIdentification.vue": {
     "file": "assets/SiteIdentification-99df5845.js",
     "src": "resources/js/Pages/NurseryShed/SiteIdentification.vue",
@@ -346,10 +628,32 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Depulping/DistributionDepulpAndDry.vue": {
+    "file": "assets/DistributionDepulpAndDry-35a42d04.js",
+    "src": "resources/js/Pages/Depulping/DistributionDepulpAndDry.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/NurseryShed/Table.vue": {
+    "file": "assets/Table-84e3e17a.js",
+    "src": "resources/js/Pages/NurseryShed/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "_pagination-d4b80ca6.js": {
     "file": "assets/pagination-d4b80ca6.js",
     "imports": [
@@ -426,10 +730,54 @@
   "resources/js/Pages/SeedBedPreparation/MarkSeedBeds.vue": {
     "file": "assets/MarkSeedBeds-cbd66f08.js",
     "src": "resources/js/Pages/SeedBedPreparation/MarkSeedBeds.vue",
+=======
+  "resources/js/Pages/FruitCollection/RecordQuantity.vue": {
+    "file": "assets/RecordQuantity-3288e10a.js",
+    "src": "resources/js/Pages/FruitCollection/RecordQuantity.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "__plugin-vue_export-helper-c27b6911.js": {
+    "file": "assets/_plugin-vue_export-helper-c27b6911.js"
+  },
+  "resources/js/Pages/Auth/Login.vue": {
+    "file": "assets/Login-660f03a1.js",
+    "src": "resources/js/Pages/Auth/Login.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GuestLayout-b84153cf.js",
+      "_TextInput-e749a47d.js",
+      "_PrimaryButton-03216885.js",
+      "_ApplicationLogo-c4abd6a2.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/PrickingOut/Table.vue": {
+    "file": "assets/Table-f3aec865.js",
+    "src": "resources/js/Pages/PrickingOut/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Auth/Register.vue": {
+    "file": "assets/Register-a056f384.js",
+    "src": "resources/js/Pages/Auth/Register.vue",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
       "resources/js/app.js",
+<<<<<<< HEAD
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
       "__plugin-vue_export-helper-c27b6911.js"
@@ -463,20 +811,69 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+      "_GuestLayout-b84153cf.js",
+      "_TextInput-e749a47d.js",
+      "_PrimaryButton-03216885.js",
+      "_ApplicationLogo-c4abd6a2.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/PrickingOut/PlantInPottingTubes.vue": {
+    "file": "assets/PlantInPottingTubes-4e660503.js",
+    "src": "resources/js/Pages/PrickingOut/PlantInPottingTubes.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/FruitStorage/QualityCheck.vue": {
+    "file": "assets/QualityCheck-6c59640c.js",
+    "src": "resources/js/Pages/FruitStorage/QualityCheck.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/FruitCollection/Table.vue": {
+    "file": "assets/Table-adec9c98.js",
+    "src": "resources/js/Pages/FruitCollection/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/SeedBedPreparation/Table.vue": {
     "file": "assets/Table-3daaa549.js",
     "src": "resources/js/Pages/SeedBedPreparation/Table.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/PrickingOut/PrickingOutActivities.vue": {
+    "file": "assets/PrickingOutActivities-671b4576.js",
+    "src": "resources/js/Pages/PrickingOut/PrickingOutActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Report/SecondHardening.vue": {
     "file": "assets/SecondHardening-f037f25f.js",
     "src": "resources/js/Pages/Report/SecondHardening.vue",
@@ -505,20 +902,65 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/NurseryShed/ShedConstruction.vue": {
+    "file": "assets/ShedConstruction-efe435eb.js",
+    "src": "resources/js/Pages/NurseryShed/ShedConstruction.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/FruitStorage/StorageAfterDisinfection.vue": {
+    "file": "assets/StorageAfterDisinfection-54cf5846.js",
+    "src": "resources/js/Pages/FruitStorage/StorageAfterDisinfection.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Depulping/IssueFromStock.vue": {
+    "file": "assets/IssueFromStock-8ca9589b.js",
+    "src": "resources/js/Pages/Depulping/IssueFromStock.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/SeedPropergation/Table.vue": {
     "file": "assets/Table-691adfdb.js",
     "src": "resources/js/Pages/SeedPropergation/Table.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Report/OperationalPlanning.vue": {
+    "file": "assets/OperationalPlanning-ad6a3322.js",
+    "src": "resources/js/Pages/Report/OperationalPlanning.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Roles/ActivityTable.vue": {
     "file": "assets/ActivityTable-317a9b37.js",
     "src": "resources/js/Pages/Roles/ActivityTable.vue",
@@ -561,10 +1003,60 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/FruitCollection/LabelGunnyBag.vue": {
+    "file": "assets/LabelGunnyBag-f01fd5e9.js",
+    "src": "resources/js/Pages/FruitCollection/LabelGunnyBag.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "_Record-c0052f72.js": {
+    "file": "assets/Record-c0052f72.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Communication/Edit-job-card.vue": {
+    "file": "assets/Edit-job-card-e62232ef.js",
+    "src": "resources/js/Pages/Communication/Edit-job-card.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_Record-c0052f72.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Report/GeneretedReport.vue": {
+    "file": "assets/GeneretedReport-61bddf49.js",
+    "src": "resources/js/Pages/Report/GeneretedReport.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/Depulping/DepulpingActivities.vue": {
+    "file": "assets/DepulpingActivities-42a8ce3d.js",
+    "src": "resources/js/Pages/Depulping/DepulpingActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/Depulping/FruitDepulp.vue": {
     "file": "assets/FruitDepulp-bdb6c8e6.js",
     "src": "resources/js/Pages/Depulping/FruitDepulp.vue",
@@ -635,22 +1127,103 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/FirstHardening/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-8f2f6798.js",
+    "src": "resources/js/Pages/FirstHardening/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue": {
+    "file": "assets/UpdateProfileInformationForm-a86f8693.js",
+    "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_TextInput-e749a47d.js",
+      "_PrimaryButton-03216885.js"
+    ]
+  },
+  "resources/js/Pages/OperationPlanning/Edit-job-card.vue": {
+    "file": "assets/Edit-job-card-4880d6aa.js",
+    "src": "resources/js/Pages/OperationPlanning/Edit-job-card.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Report/FirstHardening.vue": {
+    "file": "assets/FirstHardening-9af7bea8.js",
+    "src": "resources/js/Pages/Report/FirstHardening.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/FruitStorage/FruitStorageActivities.vue": {
+    "file": "assets/FruitStorageActivities-a595246b.js",
+    "src": "resources/js/Pages/FruitStorage/FruitStorageActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Report/Depulping.vue": {
+    "file": "assets/Depulping-a66e4483.js",
+    "src": "resources/js/Pages/Report/Depulping.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/FruitStorage/Disinfection.vue": {
     "file": "assets/Disinfection-ab2eb02a.js",
     "src": "resources/js/Pages/FruitStorage/Disinfection.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Profile/Partials/DeleteUserForm.vue": {
+    "file": "assets/DeleteUserForm-b4cd2469.js",
+    "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_TextInput-e749a47d.js"
+    ]
+  },
+  "resources/js/Pages/Report/SecondHardening.vue": {
+    "file": "assets/SecondHardening-017b80da.js",
+    "src": "resources/js/Pages/Report/SecondHardening.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Report/NurseryShedContruction.vue": {
     "file": "assets/NurseryShedContruction-f75fbc67.js",
     "src": "resources/js/Pages/Report/NurseryShedContruction.vue",
@@ -667,12 +1240,33 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/FruitCollection/TruckDeparture.vue": {
+    "file": "assets/TruckDeparture-7c0ca28c.js",
+    "src": "resources/js/Pages/FruitCollection/TruckDeparture.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Report/Communication.vue": {
+    "file": "assets/Communication-c244b217.js",
+    "src": "resources/js/Pages/Report/Communication.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/FirstHardening/Table.vue": {
     "file": "assets/Table-a81fe4fd.js",
     "src": "resources/js/Pages/FirstHardening/Table.vue",
@@ -711,12 +1305,68 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/TunnelConstruction/Communication.vue": {
+    "file": "assets/Communication-2d62c3b0.js",
+    "src": "resources/js/Pages/TunnelConstruction/Communication.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_Record-c0052f72.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Roles/UserTable.vue": {
+    "file": "assets/UserTable-47ab2453.js",
+    "src": "resources/js/Pages/Roles/UserTable.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_pagination-f8a4272c.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SecondHardening/AllOtherActivities.vue": {
+    "file": "assets/AllOtherActivities-889382cb.js",
+    "src": "resources/js/Pages/SecondHardening/AllOtherActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SecondHardening/Sorting.vue": {
+    "file": "assets/Sorting-56a0b827.js",
+    "src": "resources/js/Pages/SecondHardening/Sorting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Report/NurseryShedContruction.vue": {
+    "file": "assets/NurseryShedContruction-7f065bc3.js",
+    "src": "resources/js/Pages/Report/NurseryShedContruction.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Depulping/Table.vue": {
     "file": "assets/Table-8aeb2c74.js",
     "src": "resources/js/Pages/Depulping/Table.vue",
@@ -745,22 +1395,94 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Roles/ActivityTable.vue": {
+    "file": "assets/ActivityTable-a73e17fc.js",
+    "src": "resources/js/Pages/Roles/ActivityTable.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_pagination-f8a4272c.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Auth/VerifyEmail.vue": {
+    "file": "assets/VerifyEmail-61cdb8e1.js",
+    "src": "resources/js/Pages/Auth/VerifyEmail.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GuestLayout-b84153cf.js",
+      "_PrimaryButton-03216885.js",
+      "_ApplicationLogo-c4abd6a2.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedBedPreparation/SandTesting.vue": {
+    "file": "assets/SandTesting-c972838f.js",
+    "src": "resources/js/Pages/SeedBedPreparation/SandTesting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SecondHardening/ChemicalApplication.vue": {
+    "file": "assets/ChemicalApplication-07214e37.js",
+    "src": "resources/js/Pages/SecondHardening/ChemicalApplication.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedlingSelection/Table.vue": {
+    "file": "assets/Table-1e29b2dd.js",
+    "src": "resources/js/Pages/SeedlingSelection/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/SeedPropergation/Soaking.vue": {
     "file": "assets/Soaking-8bb01bf1.js",
     "src": "resources/js/Pages/SeedPropergation/Soaking.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "_vue-multiselect.esm-121a42f1.js": {
+    "file": "assets/vue-multiselect.esm-121a42f1.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Potting/Table.vue": {
+    "file": "assets/Table-d598a098.js",
+    "src": "resources/js/Pages/Potting/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_main-0b7572b6.js",
       "_vue-multiselect.esm-3f8166d6.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Potting/Table.vue": {
     "file": "assets/Table-92620744.js",
     "src": "resources/js/Pages/Potting/Table.vue",
@@ -777,20 +1499,53 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SeedBedPreparation/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-e75f2df5.js",
+    "src": "resources/js/Pages/SeedBedPreparation/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/TunnelConstruction/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-80ef795e.js",
+    "src": "resources/js/Pages/TunnelConstruction/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/Report/Depulping.vue": {
     "file": "assets/Depulping-d2405393.js",
     "src": "resources/js/Pages/Report/Depulping.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/TransportToOtherSites/TransportToOtherSitesActivities.vue": {
+    "file": "assets/TransportToOtherSitesActivities-e163e8c2.js",
+    "src": "resources/js/Pages/TransportToOtherSites/TransportToOtherSitesActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/NurseryShed/ShedConstruction.vue": {
     "file": "assets/ShedConstruction-ad8e4541.js",
     "src": "resources/js/Pages/NurseryShed/ShedConstruction.vue",
@@ -800,9 +1555,22 @@
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
+=======
+  "resources/js/Pages/Report/Index.vue": {
+    "file": "assets/Index-df90fe3d.js",
+    "src": "resources/js/Pages/Report/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "css": [
+      "assets/Index-59033b27.css"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Report/FruitStorage.vue": {
     "file": "assets/FruitStorage-238c7c6e.js",
     "src": "resources/js/Pages/Report/FruitStorage.vue",
@@ -839,6 +1607,97 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SeedBedPreparation/SandTransportToNursery.vue": {
+    "file": "assets/SandTransportToNursery-f7a4743f.js",
+    "src": "resources/js/Pages/SeedBedPreparation/SandTransportToNursery.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SecondHardening/CoveringAndOpening.vue": {
+    "file": "assets/CoveringAndOpening-440ca209.js",
+    "src": "resources/js/Pages/SecondHardening/CoveringAndOpening.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedExtraction/DistributionOfNuts.vue": {
+    "file": "assets/DistributionOfNuts-67d6d2b1.js",
+    "src": "resources/js/Pages/SeedExtraction/DistributionOfNuts.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedPropergation/SeedPropergationActivities.vue": {
+    "file": "assets/SeedPropergationActivities-3eb1f307.js",
+    "src": "resources/js/Pages/SeedPropergation/SeedPropergationActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedPropergation/Sowing.vue": {
+    "file": "assets/Sowing-6d05ff79.js",
+    "src": "resources/js/Pages/SeedPropergation/Sowing.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedPropergation/PrepareSolution.vue": {
+    "file": "assets/PrepareSolution-3acc1eb2.js",
+    "src": "resources/js/Pages/SeedPropergation/PrepareSolution.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedPropergation/WaterWithFungicide.vue": {
+    "file": "assets/WaterWithFungicide-d9660ce0.js",
+    "src": "resources/js/Pages/SeedPropergation/WaterWithFungicide.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedPropergation/Table.vue": {
+    "file": "assets/Table-139466fb.js",
+    "src": "resources/js/Pages/SeedPropergation/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
@@ -846,6 +1705,7 @@
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/FruitCollection/LabelGunnyBag.vue": {
     "file": "assets/LabelGunnyBag-9c8ac1b3.js",
     "src": "resources/js/Pages/FruitCollection/LabelGunnyBag.vue",
@@ -877,10 +1737,79 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SeedPropergation/Soaking.vue": {
+    "file": "assets/Soaking-1f334b91.js",
+    "src": "resources/js/Pages/SeedPropergation/Soaking.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedlingSelection/AllOtherActivities.vue": {
+    "file": "assets/AllOtherActivities-3e3fa87c.js",
+    "src": "resources/js/Pages/SeedlingSelection/AllOtherActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedlingSelection/Communication.vue": {
+    "file": "assets/Communication-1e7e9504.js",
+    "src": "resources/js/Pages/SeedlingSelection/Communication.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedlingHardening/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-fe05b34c.js",
+    "src": "resources/js/Pages/SeedlingHardening/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedlingSelection/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-e58e4a22.js",
+    "src": "resources/js/Pages/SeedlingSelection/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedlingHardening/SeedlingHardeningActivities.vue": {
+    "file": "assets/SeedlingHardeningActivities-f5ff4a3f.js",
+    "src": "resources/js/Pages/SeedlingHardening/SeedlingHardeningActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Profile/Edit.vue": {
     "file": "assets/Edit-886813d8.js",
     "src": "resources/js/Pages/Profile/Edit.vue",
@@ -902,20 +1831,40 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SeedlingSelection/SeedlingSelectionActivities.vue": {
+    "file": "assets/SeedlingSelectionActivities-701f1b86.js",
+    "src": "resources/js/Pages/SeedlingSelection/SeedlingSelectionActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/PrickingOut/Table.vue": {
     "file": "assets/Table-55b315c9.js",
     "src": "resources/js/Pages/PrickingOut/Table.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/TransportToOtherSites/RequestArrivalTransportMeans.vue": {
+    "file": "assets/RequestArrivalTransportMeans-9c9f17dd.js",
+    "src": "resources/js/Pages/TransportToOtherSites/RequestArrivalTransportMeans.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/SeedPropergation/Sowing.vue": {
     "file": "assets/Sowing-4f27e2d6.js",
     "src": "resources/js/Pages/SeedPropergation/Sowing.vue",
@@ -994,22 +1943,77 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SeedlingSelection/SelectSeeds.vue": {
+    "file": "assets/SelectSeeds-971b063b.js",
+    "src": "resources/js/Pages/SeedlingSelection/SelectSeeds.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/TransportToOtherSites/IssueFromStorage.vue": {
+    "file": "assets/IssueFromStorage-6041a61e.js",
+    "src": "resources/js/Pages/TransportToOtherSites/IssueFromStorage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedlingHardening/AllOtherActivities.vue": {
+    "file": "assets/AllOtherActivities-ca8f5c55.js",
+    "src": "resources/js/Pages/SeedlingHardening/AllOtherActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/TunnelConstruction/Table.vue": {
+    "file": "assets/Table-39041945.js",
+    "src": "resources/js/Pages/TunnelConstruction/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/SeedExtraction/Table.vue": {
     "file": "assets/Table-48b2d975.js",
     "src": "resources/js/Pages/SeedExtraction/Table.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/TransportToOtherSites/Table.vue": {
+    "file": "assets/Table-dd927f9c.js",
+    "src": "resources/js/Pages/TransportToOtherSites/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/FirstHardening/ChemicalApplication.vue": {
     "file": "assets/ChemicalApplication-42dbe6ef.js",
     "src": "resources/js/Pages/FirstHardening/ChemicalApplication.vue",
@@ -1040,10 +2044,40 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SeedlingHardening/Table.vue": {
+    "file": "assets/Table-4d5bd3b6.js",
+    "src": "resources/js/Pages/SeedlingHardening/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/TunnelConstruction/TunnelConstructionActivities.vue": {
+    "file": "assets/TunnelConstructionActivities-5b3a5c26.js",
+    "src": "resources/js/Pages/TunnelConstruction/TunnelConstructionActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/TransportMedia/Index.vue": {
+    "file": "assets/Index-84c9ca0f.js",
+    "src": "resources/js/Pages/TransportMedia/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "_pagination-f8a4272c.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/TunnelConstruction/TransportWithies.vue": {
     "file": "assets/TransportWithies-1ee5cfae.js",
     "src": "resources/js/Pages/TunnelConstruction/TransportWithies.vue",
@@ -1132,22 +2166,121 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Report/PrickingOut.vue": {
+    "file": "assets/PrickingOut-2023dff7.js",
+    "src": "resources/js/Pages/Report/PrickingOut.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/FruitStorage/TruckArrival.vue": {
+    "file": "assets/TruckArrival-1b8d0433.js",
+    "src": "resources/js/Pages/FruitStorage/TruckArrival.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/FruitStorage/Table.vue": {
+    "file": "assets/Table-18e90d0a.js",
+    "src": "resources/js/Pages/FruitStorage/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Potting/TransportAndMixSubstrate.vue": {
+    "file": "assets/TransportAndMixSubstrate-bfb3a94d.js",
+    "src": "resources/js/Pages/Potting/TransportAndMixSubstrate.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/TransportToOtherSites/SeedStorage.vue": {
+    "file": "assets/SeedStorage-c23001c4.js",
+    "src": "resources/js/Pages/TransportToOtherSites/SeedStorage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/NurseryShed/Planning.vue": {
+    "file": "assets/Planning-56a5e29f.js",
+    "src": "resources/js/Pages/NurseryShed/Planning.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/TunnelConstruction/LabelSeedlingBeds.vue": {
+    "file": "assets/LabelSeedlingBeds-69d4d786.js",
+    "src": "resources/js/Pages/TunnelConstruction/LabelSeedlingBeds.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/FruitCollection/FruitCollectionActivities.vue": {
+    "file": "assets/FruitCollectionActivities-a09680e6.js",
+    "src": "resources/js/Pages/FruitCollection/FruitCollectionActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/SeedPropergation/NippingAndSlitting.vue": {
     "file": "assets/NippingAndSlitting-9ad06922.js",
     "src": "resources/js/Pages/SeedPropergation/NippingAndSlitting.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Report/SeedBedPreparation.vue": {
+    "file": "assets/SeedBedPreparation-2277a2d4.js",
+    "src": "resources/js/Pages/Report/SeedBedPreparation.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_main-0b7572b6.js",
       "_vue-multiselect.esm-3f8166d6.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/TransportToOtherSites/WeighAndPackage.vue": {
     "file": "assets/WeighAndPackage-254db0d9.js",
     "src": "resources/js/Pages/TransportToOtherSites/WeighAndPackage.vue",
@@ -1164,10 +2297,26 @@
   "resources/js/Pages/FruitStorage/QuantityCheck.vue": {
     "file": "assets/QuantityCheck-3e721560.js",
     "src": "resources/js/Pages/FruitStorage/QuantityCheck.vue",
+=======
+  "resources/js/Pages/Roles/ActivityEdit.vue": {
+    "file": "assets/ActivityEdit-066b58ff.js",
+    "src": "resources/js/Pages/Roles/ActivityEdit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue": {
+    "file": "assets/UpdatePasswordForm-3c9c2d4d.js",
+    "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
       "resources/js/app.js",
+<<<<<<< HEAD
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
       "__plugin-vue_export-helper-c27b6911.js"
@@ -1303,6 +2452,133 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+      "_TextInput-e749a47d.js",
+      "_PrimaryButton-03216885.js"
+    ]
+  },
+  "resources/js/Pages/SecondHardening/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-453700eb.js",
+    "src": "resources/js/Pages/SecondHardening/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/PrickingOut/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-d2313acd.js",
+    "src": "resources/js/Pages/PrickingOut/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Communication/Table.vue": {
+    "file": "assets/Table-207c0b25.js",
+    "src": "resources/js/Pages/Communication/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Potting/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-d3914cf5.js",
+    "src": "resources/js/Pages/Potting/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/PrickingOut/ChemicalPreparation.vue": {
+    "file": "assets/ChemicalPreparation-688258b6.js",
+    "src": "resources/js/Pages/PrickingOut/ChemicalPreparation.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedBedPreparation/SandChemicalApplication.vue": {
+    "file": "assets/SandChemicalApplication-bb1c9173.js",
+    "src": "resources/js/Pages/SeedBedPreparation/SandChemicalApplication.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Edit.vue": {
+    "file": "assets/Edit-7a2cc821.js",
+    "src": "resources/js/Pages/Profile/Edit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ApplicationLogo-c4abd6a2.js",
+      "resources/js/app.js",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_TextInput-e749a47d.js",
+      "_PrimaryButton-03216885.js"
+    ]
+  },
+  "resources/js/Pages/FirstHardening/ChemicalApplication.vue": {
+    "file": "assets/ChemicalApplication-03eddd98.js",
+    "src": "resources/js/Pages/FirstHardening/ChemicalApplication.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Report/Potting.vue": {
+    "file": "assets/Potting-feb6303d.js",
+    "src": "resources/js/Pages/Report/Potting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Welcome.vue": {
+    "file": "assets/Welcome-c796db2d.js",
+    "src": "resources/js/Pages/Welcome.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Report/SeedlingSelection.vue": {
+    "file": "assets/SeedlingSelection-10623ae4.js",
+    "src": "resources/js/Pages/Report/SeedlingSelection.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
@@ -1310,6 +2586,7 @@
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/SecondHardening/Table.vue": {
     "file": "assets/Table-3f48f9c8.js",
     "src": "resources/js/Pages/SecondHardening/Table.vue",
@@ -1338,10 +2615,41 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/PrickingOut/AllOtherActivities.vue": {
+    "file": "assets/AllOtherActivities-005f2d61.js",
+    "src": "resources/js/Pages/PrickingOut/AllOtherActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SecondHardening/Table.vue": {
+    "file": "assets/Table-b23b5b08.js",
+    "src": "resources/js/Pages/SecondHardening/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/Roles/UserEdit.vue": {
+    "file": "assets/UserEdit-2613933e.js",
+    "src": "resources/js/Pages/Roles/UserEdit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/Potting/ArrangingPots.vue": {
     "file": "assets/ArrangingPots-81e9bbb4.js",
     "src": "resources/js/Pages/Potting/ArrangingPots.vue",
@@ -1416,10 +2724,82 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Report/FruitCollection.vue": {
+    "file": "assets/FruitCollection-07a0b9e1.js",
+    "src": "resources/js/Pages/Report/FruitCollection.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/TransportToOtherSites/WeighAndPackage.vue": {
+    "file": "assets/WeighAndPackage-a39e1b11.js",
+    "src": "resources/js/Pages/TransportToOtherSites/WeighAndPackage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedBedPreparation/MarkSeedBeds.vue": {
+    "file": "assets/MarkSeedBeds-2cf359dc.js",
+    "src": "resources/js/Pages/SeedBedPreparation/MarkSeedBeds.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "_PrimaryButton-03216885.js": {
+    "file": "assets/PrimaryButton-03216885.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Report/SeedBedPropagation.vue": {
+    "file": "assets/SeedBedPropagation-2277a2d4.js",
+    "src": "resources/js/Pages/Report/SeedBedPropagation.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/FirstHardening/Sorting.vue": {
+    "file": "assets/Sorting-3918d2f2.js",
+    "src": "resources/js/Pages/FirstHardening/Sorting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Report/FruitStorage.vue": {
+    "file": "assets/FruitStorage-116f9498.js",
+    "src": "resources/js/Pages/Report/FruitStorage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/SecondHardening/MaterialAcquisition.vue": {
     "file": "assets/MaterialAcquisition-b56c2cab.js",
     "src": "resources/js/Pages/SecondHardening/MaterialAcquisition.vue",
@@ -1438,10 +2818,34 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/FruitStorage/QuantityCheck.vue": {
+    "file": "assets/QuantityCheck-9d98f825.js",
+    "src": "resources/js/Pages/FruitStorage/QuantityCheck.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/Depulping/FruitDepulp.vue": {
+    "file": "assets/FruitDepulp-1e871401.js",
+    "src": "resources/js/Pages/Depulping/FruitDepulp.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/SeedPropergation/MaterialAcquisition.vue": {
     "file": "assets/MaterialAcquisition-43be9fd0.js",
     "src": "resources/js/Pages/SeedPropergation/MaterialAcquisition.vue",
@@ -1484,10 +2888,55 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/FirstHardening/CoveringAndOpening.vue": {
+    "file": "assets/CoveringAndOpening-ea2a2c16.js",
+    "src": "resources/js/Pages/FirstHardening/CoveringAndOpening.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedBedPreparation/IdentifySandCollectionPoint.vue": {
+    "file": "assets/IdentifySandCollectionPoint-ff450a51.js",
+    "src": "resources/js/Pages/SeedBedPreparation/IdentifySandCollectionPoint.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Potting/AllOtherActivities.vue": {
+    "file": "assets/AllOtherActivities-8c9af126.js",
+    "src": "resources/js/Pages/Potting/AllOtherActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedExtraction/SeedExtractionActivities.vue": {
+    "file": "assets/SeedExtractionActivities-f7530439.js",
+    "src": "resources/js/Pages/SeedExtraction/SeedExtractionActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/TunnelConstruction/Communication.vue": {
     "file": "assets/Communication-eb6c98a7.js",
     "src": "resources/js/Pages/TunnelConstruction/Communication.vue",
@@ -1527,10 +2976,44 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SeedExtraction/StorageIssue.vue": {
+    "file": "assets/StorageIssue-65c6c0ab.js",
+    "src": "resources/js/Pages/SeedExtraction/StorageIssue.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedPropergation/AllOtherActivities.vue": {
+    "file": "assets/AllOtherActivities-c44b88e7.js",
+    "src": "resources/js/Pages/SeedPropergation/AllOtherActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Report/Transport.vue": {
+    "file": "assets/Transport-42e7985c.js",
+    "src": "resources/js/Pages/Report/Transport.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/SeedlingSelection/AllOtherActivities.vue": {
     "file": "assets/AllOtherActivities-423ce866.js",
     "src": "resources/js/Pages/SeedlingSelection/AllOtherActivities.vue",
@@ -1549,20 +3032,48 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/Report/SeedExtraction.vue": {
+    "file": "assets/SeedExtraction-90703e74.js",
+    "src": "resources/js/Pages/Report/SeedExtraction.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/Report/Propagation.vue": {
+    "file": "assets/Propagation-eddd00d2.js",
+    "src": "resources/js/Pages/Report/Propagation.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/PrickingOut/PrickingOutActivities.vue": {
     "file": "assets/PrickingOutActivities-1409bf7c.js",
     "src": "resources/js/Pages/PrickingOut/PrickingOutActivities.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SeedBedPreparation/Table.vue": {
+    "file": "assets/Table-a7d2b9b7.js",
+    "src": "resources/js/Pages/SeedBedPreparation/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/SecondHardening/AllOtherActivities.vue": {
     "file": "assets/AllOtherActivities-8bd4be34.js",
     "src": "resources/js/Pages/SecondHardening/AllOtherActivities.vue",
@@ -1581,12 +3092,31 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SecondHardening/SecondHardeningActivities.vue": {
+    "file": "assets/SecondHardeningActivities-54e53f0a.js",
+    "src": "resources/js/Pages/SecondHardening/SecondHardeningActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/Report/SeedlingBedConstruction.vue": {
+    "file": "assets/SeedlingBedConstruction-8c0aef38.js",
+    "src": "resources/js/Pages/Report/SeedlingBedConstruction.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "_Record-30107ea8.js",
       "_main-0b7572b6.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/SeedExtraction/StorageIssue.vue": {
     "file": "assets/StorageIssue-de4d2711.js",
     "src": "resources/js/Pages/SeedExtraction/StorageIssue.vue",
@@ -1665,16 +3195,101 @@
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "_pagination-f8a4272c.js": {
+    "file": "assets/pagination-f8a4272c.js",
+    "imports": [
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
+  "resources/js/Pages/SeedExtraction/SeedSorting.vue": {
+    "file": "assets/SeedSorting-8f0597b7.js",
+    "src": "resources/js/Pages/SeedExtraction/SeedSorting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedPropergation/MaterialAcquisition.vue": {
+    "file": "assets/MaterialAcquisition-b3f847b3.js",
+    "src": "resources/js/Pages/SeedPropergation/MaterialAcquisition.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedPropergation/NippingAndSlitting.vue": {
+    "file": "assets/NippingAndSlitting-f79d3ea8.js",
+    "src": "resources/js/Pages/SeedPropergation/NippingAndSlitting.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/TunnelConstruction/TransportWithies.vue": {
+    "file": "assets/TransportWithies-3e46753c.js",
+    "src": "resources/js/Pages/TunnelConstruction/TransportWithies.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedPropergation/MoistureAirRegulation.vue": {
+    "file": "assets/MoistureAirRegulation-8c539433.js",
+    "src": "resources/js/Pages/SeedPropergation/MoistureAirRegulation.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedBedPreparation/BedPreparationActivities.vue": {
+    "file": "assets/BedPreparationActivities-b4ef4153.js",
+    "src": "resources/js/Pages/SeedBedPreparation/BedPreparationActivities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+<<<<<<< HEAD
   "resources/js/Pages/Report/Index.vue": {
     "file": "assets/Index-9041c1a0.js",
     "src": "resources/js/Pages/Report/Index.vue",
     "isDynamicEntry": true,
     "imports": [
       "_Authenticated-b2c6d4a9.js",
+=======
+  "resources/js/Pages/SeedExtraction/Table.vue": {
+    "file": "assets/Table-d655c1d5.js",
+    "src": "resources/js/Pages/SeedExtraction/Table.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -1682,6 +3297,7 @@
       "assets/Index-59033b27.css"
     ]
   },
+<<<<<<< HEAD
   "resources/js/Pages/Report/Transport.vue": {
     "file": "assets/Transport-e348126b.js",
     "src": "resources/js/Pages/Report/Transport.vue",
@@ -1706,6 +3322,35 @@
   },
   "_main-0b7572b6.js": {
     "file": "assets/main-0b7572b6.js",
+=======
+  "resources/js/Pages/SeedPropergation/MakingFarrows.vue": {
+    "file": "assets/MakingFarrows-f42bb552.js",
+    "src": "resources/js/Pages/SeedPropergation/MakingFarrows.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "resources/js/Pages/SeedExtraction/IssueFromStock.vue": {
+    "file": "assets/IssueFromStock-aa5cfa55.js",
+    "src": "resources/js/Pages/SeedExtraction/IssueFromStock.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Authenticated-6ca149e0.js",
+      "resources/js/app.js",
+      "_Record-c0052f72.js",
+      "_main-9361634d.js",
+      "_vue-multiselect.esm-121a42f1.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ]
+  },
+  "_main-9361634d.js": {
+    "file": "assets/main-9361634d.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "imports": [
       "resources/js/app.js"
     ],
@@ -1714,7 +3359,11 @@
     ]
   },
   "resources/js/app.js": {
+<<<<<<< HEAD
     "file": "assets/app-59fb61c6.js",
+=======
+    "file": "assets/app-c03fa087.js",
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
@@ -1865,7 +3514,11 @@
       "resources/js/Pages/Welcome.vue"
     ],
     "css": [
+<<<<<<< HEAD
       "assets/app-ef409906.css"
+=======
+      "assets/app-c5eb0b7a.css"
+>>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
     ]
   }
 }

@@ -1,6 +1,7 @@
 <template>
 
     <Head title="Dashboard" />
+    <!-- FRUITCOLLECTION KIAMBERE -->
 
     <BreezeAuthenticatedLayout>
         <div class="content-wrapper">
