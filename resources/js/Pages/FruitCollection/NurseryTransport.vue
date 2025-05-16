@@ -41,6 +41,7 @@
                                             <div class="card-header flex justify-between">
                                                 <h3 class="card-title">Job Card Review</h3>
                                                 <p>Card No: {{ Jobcard.job_card_number }}</p>
+                                                <p>Project Name: {{ Jobcard.project_name }}</p>
                                                 <p>Site: {{ Jobcard.site }}</p>
                                             </div>
                                             <!-- /.card-header -->
@@ -97,7 +98,10 @@
                                                                         <tr>
                                                                             <th>ID</th>
                                                                             <th>Tree Number</th>
-                                                                            <th>Recorded Details</th>
+                                                                            <!-- <th>Recorded Details -->
+                                                                                <th>Quantity</th>
+                                                                                <th>Means of Transport</th>
+                                                                              
                                                                             <th>Action</th>
                                                                         </tr>
                                                                     </thead>
@@ -112,6 +116,12 @@
                                                                                 <li>
                                                                                     <p>{{ stock.quantity }}</p>
                                                                                 </li>
+                                                                            </ol>
+                                                                            </td>
+                                                                            <td>
+                                                                            <ol class="flex justify-between" v-for="(stock, index) in fruit.stocks"
+                                                                                :key="index">
+                                                                                
                                                                                 <li>
                                                                                     <p>{{ stock.truck.truck_number }} - {{ stock.truck.description }}</p>
                                                                                 </li>
@@ -137,6 +147,48 @@
                                                             Sign
                                                         </button>
                                                     </div>
+
+                                                    <div class="flex flex-col justify-between">
+                                                          
+                                                          <div class="flex justify-center">
+                                                              <div class="block bg-white max-w-sm text-center">
+                                                                  <div class="py-2 px-6 border-b border-gray-300">
+                                                                      Signature
+                                                                  </div>
+                                                                  <p class="text-xs text-red-600 mt-2"
+                                                                      v-if="form.errors.signature">{{
+                                                                              form.errors.signature
+                                                                      }}</p>
+                                                                  <div class="p-6">
+                                                                      <p class="text-gray-700 text-xs mb-4">
+                                                                          Sign to confirm below that you approve
+                                                                          document
+                                                                      </p>
+                                                                      <div v-for="$role in Jobcard.childactivity.roles"
+                                                                          :key="$role.id"
+                                                                          class="flex items-center space-x-1">
+                                                                          <input type="checkbox"
+                                                                              v-model="form.signature"
+                                                                              :value="$role.id"
+                                                                              class="text-green-600 rounded-md focus:ring-0">
+                                                                          <label class="mt-2 text-sm font-bold">{{
+                                                                                  $role.role
+                                                                          }}</label>
+
+                                                                          <!-- <label>{{ $page.props.ActivityTitle }} Start Date:</label> -->
+                                                                          <!-- position="left" altPosition (on the Datepicker bellow) -->
+                                                                          <Datepicker v-model="form.sign_time" position="left" ></Datepicker>
+                                                                               <p class="text-xs text-red-600 mt-2" v-if="form.errors.sign_time">
+                                                                                  {{ form.errors.sign_time }}
+                                                                                    </p>
+                                                          
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+
+                                                      </div>
+                                                    <!-- added signature -->
                                                 </div>
 
                                             </div>
@@ -164,8 +216,9 @@ import { Head, Link } from '@inertiajs/inertia-vue3';
 import { Inertia } from "@inertiajs/inertia";
 import Record from '@/Components/Record.vue'
 import Datepicker from '@vuepic/vue-datepicker';
-import '@vuepic/vue-datepicker/dist/main.css'
+import '@vuepic/vue-datepicker/dist/main.css';
 import axios from 'axios';
+
 export default {
     components: { BreezeAuthenticatedLayout, Head, Link, Datepicker, Record },
     props: {
@@ -173,6 +226,10 @@ export default {
         success: String,
         BeginDate: String,
         Trucks: Object,
+        // added >
+        Jobcard: Object,
+        Signed: Object,
+        BeginDate: String,
     },
     data() {
         return {

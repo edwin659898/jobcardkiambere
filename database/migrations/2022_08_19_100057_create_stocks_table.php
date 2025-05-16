@@ -27,6 +27,7 @@ return new class extends Migration
             $table->unsignedBigInteger('truck_id');
             $table->dateTime('departure_time')->nullable();
             $table->dateTime('arrival_time')->nullable();
+            $table->dateTime('end_date')->nullable();
             $table->timestamps();
         });
     }

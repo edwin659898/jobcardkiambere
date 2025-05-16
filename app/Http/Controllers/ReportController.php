@@ -49,6 +49,10 @@ class ReportController extends Controller
             $query->with('signatures', function ($query) use ($item) {
                 $query->with('user', 'role')->where('job_card_id', $item->id);
             });
+            // // Documents
+            // $query->with('job_card_record', function ($query) use ($item) {
+            //     $query->with('record', 'location')->where('job_card_id', $item->id);
+            // });
             $query->with('bedPreparation', function ($query) use ($item) {
                 $query->where('job_card_id', $item->id);
             });
@@ -60,7 +64,7 @@ class ReportController extends Controller
             });
         }]);
 
-        return Inertia::render('Report/'.$parent_activity->report_template_name, [
+        return Inertia::render('Report/GeneretedReport', [
             'JobCard' => $jobcard,
             'ParentActivity' => $parent_activity,
             'Trees' => $trees,

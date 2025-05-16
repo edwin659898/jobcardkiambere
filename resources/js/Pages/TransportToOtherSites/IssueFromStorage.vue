@@ -108,10 +108,33 @@
                                                             </table>
 
                                                         </div>
-                                                    </form>
+                                                    </form>                                                   
 
 
                                                     <div class="flex justify-end mt-4">
+                                                        <!-- added signature -->
+
+                                                        <div v-for="$role in Jobcard.childactivity.roles"
+                                                                            :key="$role.id"
+                                                                            class="flex items-center space-x-1">
+                                                                            <input type="checkbox"
+                                                                                v-model="form.signature"
+                                                                                :value="$role.id"
+                                                                                class="text-green-600 rounded-md focus:ring-0">
+                                                                            <label class="mt-2 text-sm font-bold">{{
+                                                                                    $role.role
+                                                                            }}</label>
+
+                                                                            <!-- <label>{{ $page.props.ActivityTitle }} Start Date:</label> -->
+                                                                            <!-- position="left" altPosition (on the Datepicker bellow) -->
+                                                            <Datepicker v-model="form.signature_time" position="left" ></Datepicker>
+                                                            <p class="text-xs text-red-600 mt-2" v-if="form.errors.signature_time">
+                                                                {{ form.errors.signature_time }}
+                                                            </p>
+
+                                                                        </div>
+                                                                        <!-- end of added signature -->
+
                                                         <button @click="complete(Jobcard.id)"
                                                             class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                                                             Sign and Proceed

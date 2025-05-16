@@ -34,9 +34,9 @@ class FruitCollectionController extends Controller
     {
         Session::put('current_activity_id', $id);
         $child = ChildActivity::findOrFail($id);
-        $user_roles = auth()->user()->roles()->pluck('role')->toArray();
+        // $user_roles = auth()->user()->roles()->pluck('role')->toArray();
         $activity_role = $child->roles()->pluck('role')->toArray();
-        abort_unless(count(array_intersect($user_roles, $activity_role)) > 0, 403);
+        // abort_unless(count(array_intersect($user_roles, $activity_role)) > 0, 403);
         $parent = $child->parent;
         $currentCard = JobCard::all();
 
@@ -210,6 +210,7 @@ class FruitCollectionController extends Controller
         return redirect()->route('Dashboard')->with('success', 'Update Successfully');
     }
 
+
     //view template for tree collection
     public function FruitCollectionFromTree($id)
     {
@@ -252,10 +253,12 @@ class FruitCollectionController extends Controller
     {
         $jobCard = $this->GetJobcard($id);
         $start_date = $this->GetDate($id);
+        $end_date = $this->GetDate($id);
 
         return Inertia::render('FruitCollection/RecordQuantity', [
             'Jobcard' => $jobCard,
-            'BeginDate' => $start_date
+            'BeginDate' => $start_date,
+            'EndDate' => $end_date
         ]);
     }
 
@@ -316,7 +319,7 @@ class FruitCollectionController extends Controller
 
         if (!$timeline) {
             Timeline::create([
-                'start_date' => Carbon::now()->format('Y-m-d, H:i:s'),
+                'start_date' => Carbon::now()->format('Y-m-d'),
                 'job_card_id' => $jobcard->id,
                 'child_activity_id' => Session::get('current_activity_id')
             ]);
@@ -357,11 +360,198 @@ class FruitCollectionController extends Controller
         return $jobCard;
     }
 
+//     public function AssitToStore(Request $request, $id)
+//     {
+//         $data = $request->validate([
+//             'quantity' => 'required',
+//             'truck_number' => 'required',
+//         ]);
+
+//         $fruit = Fruit::findOrFail($id);
+
+//         $jobcard = JobCard::findOrFail($fruit->job_card_id);
+
+//         $timeline = Timeline::where([
+//             'job_card_id' => $jobcard->id,
+//             'child_activity_id' => Session::get('current_activity_id')
+//         ])->whereDate('created_at', Carbon::today())->first();
+
+//         if (!$timeline) {
+//             Timeline::create([
+//                 'start_date' => Carbon::now()->format('Y-m-d, H:i:s'),
+//                 'job_card_id' => $jobcard->id,
+//                 'child_activity_id' => Session::get('current_activity_id')
+//             ]);
+//         }
+
+//         Stock::create([
+//             'fruit_id' => $fruit->id,
+//             'truck_id' => $data['truck_number'],
+//             'quantity' => $data['quantity'],
+//             'job_card_id' => $jobcard->id,
+//             'child_activity_id' => Session::get('current_activity_id')
+//         ]);
+
+//         return redirect()->back()->with('success', 'Updated Successfully');
+//     }
+// }
+
+
+
+//    //view template for tree collection
+//    public function FruitCollectionFromTree($id)
+//    {
+//        $jobCard = $this->GetJobcard($id);
+//        $start_date = $this->GetDate($id);
+
+//        return Inertia::render('FruitCollection/RecordQuantity', [
+//            'Jobcard' => $jobCard,
+//            'BeginDate' => $start_date
+//        ]);
+//    }
+
+//     //Sorting Out of the fruits
+//     public function FruitSorting($id)
+//     {
+
+//         $jobCard = $this->GetJobcard($id);
+//         $start_date = $this->GetDate($id);
+
+//         return Inertia::render('FruitCollection/QualityCheck', [
+//             'Jobcard' => $jobCard,
+//             'BeginDate' => $start_date
+//         ]);
+//     }
+
+//     //Sorting Out of the fruits
+//     public function FruitPackaging($id)
+//     {
+//         $jobCard = $this->GetJobcard($id);
+//         $start_date = $this->GetDate($id);
+
+//         return Inertia::render('FruitCollection/RecordQuantity', [
+//             'Jobcard' => $jobCard,
+//             'BeginDate' => $start_date
+//         ]);
+//     }
+
+//     //view template for farm collection
+//     public function WeighingFruits($id)
+//     {
+//         $jobCard = $this->GetJobcard($id);
+//         $start_date = $this->GetDate($id);
+
+//         return Inertia::render('FruitCollection/RecordQuantity', [
+//             'Jobcard' => $jobCard,
+//             'BeginDate' => $start_date
+//         ]);
+//     }
+
+//     //view template for nursery transport
+//     public function FruitCollectionNurseryTransport($id)
+//     {
+//         $jobCard = $this->GetJobcard($id);
+//         $start_date = $this->GetDate($id);
+//         $trucks = Truck::where(['site' => $jobCard->site])->get();
+ 
+//         return Inertia::render('FruitCollection/NurseryTransport', [
+//             'Jobcard' => $jobCard,
+//             'BeginDate' => $start_date,
+//             'Trucks' => $trucks,
+//         ]);
+//     }
+
+//     public function TruckDeparture($id)
+//     {
+//         $jobCard = JobCard::findOrFail($id);
+//         $current_activity_number = ChildActivity::find(Session::get('current_activity_id'))->child_number;
+//         $prev_activity = ChildActivity::where('child_number','<',$current_activity_number)->orderBy('child_number','desc')->first();
+
+//         $jobCard->load([
+//             'childactivity.roles',
+//             'stocks' => function ($query) use ($prev_activity) {
+//                 $query->with('user','truck','fruit.tree')->where(['child_activity_id' => $prev_activity->id]);
+//             }
+//         ]);
+
+
+//         return Inertia::render('FruitCollection/TruckDeparture', [
+//             'Jobcard' => $jobCard,
+//         ]);
+//     }
+
+
+//     public function updateTruckDepartureTime(Request $request)
+//     {
+//         $data = $request->validate([
+//             'departure_date' => 'required',
+//             'selectedTrucks'  => 'required',
+//         ]);
+
+//         foreach($data['selectedTrucks'] as $key => $value){
+//             $stock = Stock::find($value);
+
+//             $st = $stock->update([
+//                 'departure_time' => Carbon::parse($data['departure_date'])->format('Y-m-d H:i')
+//             ]);
+//         }
+
+//         $jobcard = JobCard::findOrFail($request->jobcard_id);
+
+//         $timeline = Timeline::where([
+//             'job_card_id' => $jobcard->id,
+//             'child_activity_id' => Session::get('current_activity_id')
+//         ])->whereDate('created_at', Carbon::today())->first();
+
+//         if (!$timeline) {
+//             Timeline::create([
+//                 'start_date' => Carbon::now()->format('Y-m-d, H:i:s'),
+//                 'job_card_id' => $jobcard->id,
+//                 'child_activity_id' => Session::get('current_activity_id')
+//             ]);
+//         }
+
+//         return redirect()->back()->with('success', 'Updated Successfully');
+//     }
+
+//     private function GetDate($id)
+//     {
+//         $jobCard = JobCard::findOrFail($id);
+//         $find_start_date = Timeline::where([
+//             'job_card_id' => $jobCard->id,
+//             'child_activity_id' => Session::get('current_activity_id')
+//         ])->whereDate('created_at',Carbon::today())->first();
+
+//         if ($find_start_date) {
+//             $start_date = $find_start_date->start_date;
+//         } else {
+//             $start_date = Carbon::now();
+//         }
+
+//         return $start_date;
+//     }
+
+//     private function GetJobcard($id)
+//     {
+//         $jobCard = JobCard::findOrFail($id);
+//         $jobCard->load([
+//             'childactivity.roles',
+//             'fruits.tree',
+//             'fruits.truck',
+//             'fruits.stocks' => function ($query) use ($jobCard) {
+//                 $query->with('user','truck')->where(['child_activity_id' => Session::get('current_activity_id')]);
+//             }
+//         ]);
+
+//         return $jobCard;
+//     }
+
     public function AssitToStore(Request $request, $id)
     {
         $data = $request->validate([
             'quantity' => 'required',
-            'truck_number' => 'required',
+            // nulluble
+            'truck_number' => 'nullable',
         ]);
 
         $fruit = Fruit::findOrFail($id);
@@ -375,7 +565,7 @@ class FruitCollectionController extends Controller
 
         if (!$timeline) {
             Timeline::create([
-                'start_date' => Carbon::now()->format('Y-m-d, H:i:s'),
+                'start_date' => Carbon::now()->format('Y-m-d, H:mm:s'),
                 'job_card_id' => $jobcard->id,
                 'child_activity_id' => Session::get('current_activity_id')
             ]);
@@ -383,12 +573,29 @@ class FruitCollectionController extends Controller
 
         Stock::create([
             'fruit_id' => $fruit->id,
-            'truck_id' => $data['truck_number'],
-            'quantity' => $data['quantity'],
+            // not there
+            // 'truck_id' => $data['truck_number'],
+            'quantity' => $data['quantity'] ?? null,
+            // ?? null, //up there
             'job_card_id' => $jobcard->id,
             'child_activity_id' => Session::get('current_activity_id')
         ]);
 
         return redirect()->back()->with('success', 'Updated Successfully');
     }
+
+
+    // added status
+    // public function updateStocktimer(Request $request) {
+    //     $request->validate([
+    //         'id' => 'required|integer',
+    //         'start' => 'required|integer|min:0|max:1'
+    //     ]);
+    
+    //     $stocktimer = Stocktimer::find($request->id);
+    //     $stocktimer->start = $request->start;
+    //     $stocktimer->save();
+    
+    //     return response()->json(['message' => 'Start time updated successfully']);
+    // }
 }

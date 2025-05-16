@@ -57,7 +57,8 @@
                                                         <tr>
                                                             <th>Job card Name</th>
                                                             <th>Site</th>
-                                                            
+                                                            <!-- <th>Project Name</th> -->
+                                                            <th>Card No:</th>                                                            
                                                             <th>View</th>
                                                         </tr>
                                                     </thead>
@@ -65,10 +66,12 @@
                                                         <tr v-for="$card in currentCards" :key="$card.id">
                                                             <td>{{ $card.job_card_number }}</td>
                                                             <td>{{ $card.site }}</td>
+                                                            <!-- <td>{{ $card.job_card_number }}</td> -->
+                                                            <td>{{ $card.project_name }}</td>
 
                                                             <td>
                                                                 <Link
-                                                                    :href="route(`sign.stage${childData.child_number}`, $card.id)">
+                                                                    :href="route(`sign.stage${childData.child_number}`, $card.id)" :data="{ foo: bar }">
                                                                 <i
                                                                     class="fas fa-eye text-green-500 cursor-pointer hover:text-green-700"></i>
                                                                 </Link>

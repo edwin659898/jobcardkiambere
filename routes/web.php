@@ -1,12 +1,16 @@
 <?php
 
-use App\Models\ChildActivity;
-use App\Models\JobCard;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SeedExtractionController;
 use App\Models\Tree;
-use Illuminate\Foundation\Application;
+use Inertia\Inertia;
+use App\Models\JobCard;
+use App\Models\ChildActivity;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\StockTimerController;
+use App\Models\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +63,32 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/destroy-role/{id}', [\App\Http\Controllers\RoleController::class, 'destroyRole'])->name('destroy.role');
     Route::post('/upload/activities', [\App\Http\Controllers\RoleController::class, 'uploadActivities']);
 
+
+    // users create, edit and view
+    // // Route::post('/create_user', 'AdminController@createUser');
+    // // Route::get('/get_users', 'AdminController@getUsers');
+    // // Route::post('/edit_user', 'AdminController@editUser');
+    //       starts here
+    Route::get('/manage/user/users', [\App\Http\Controllers\RoleController::class, 'indexUsers'])->name('user.users');
+    Route::get('/manage/user/users/{id}', [\App\Http\Controllers\RoleController::class, 'editUser'])->name('Edit.user.users');
+    Route::get('/manage/activity/users', [\App\Http\Controllers\RoleController::class, 'ActivityUserIndex'])->name('activity.users');
+    Route::get('/manage/activity/users/{id}', [\App\Http\Controllers\RoleController::class, 'editActivityUsers'])->name('Edit.activity.users');
+    Route::delete('/users/{id}', [RoleController::class, 'destroy'])->name('users.destroy');
+
+    //        ends here
+
+
+    //Users Create, View , Delete (Inactive), Edit
+    // Route::get('/manage/user/roles', [\App\Http\Controllers\RoleController::class, 'index'])->name('user.roles');
+    // Route::get('/manage/user/roles/{id}', [\App\Http\Controllers\RoleController::class, 'editUserRoles'])->name('Edit.user.roles');
+    // Route::patch('/update/user/roles/{id}', [\App\Http\Controllers\RoleController::class, 'updateUser'])->name('Update.user.roles');
+    // Route::get('/manage/activity/roles', [\App\Http\Controllers\RoleController::class, 'ActivityIndex'])->name('activity.roles');
+    // Route::get('/manage/activity/roles/{id}', [\App\Http\Controllers\RoleController::class, 'editActivityRoles'])->name('Edit.activity.roles');
+    // Route::patch('/update/activity/roles/{id}', [\App\Http\Controllers\RoleController::class, 'updateActivity'])->name('Update.activity.roles');
+    // Route::post('/create-role', [\App\Http\Controllers\RoleController::class, 'createRole'])->name('create role');
+    // Route::delete('/destroy-role/{id}', [\App\Http\Controllers\RoleController::class, 'destroyRole'])->name('destroy.role');
+    // Route::post('/upload/activities', [\App\Http\Controllers\RoleController::class, 'uploadActivities']);
+
     //TransportMedia
     Route::get('/transport-media/list', [\App\Http\Controllers\TransportController::class, 'index'])->name('transport.medias');
     Route::post('/create-media', [\App\Http\Controllers\TransportController::class, 'create'])->name('create TM');
@@ -97,6 +127,16 @@ Route::middleware(['auth'])->group(function () {
     Route::get('Fruit-collection/load-to-trucks/{id}', [\App\Http\Controllers\FruitCollectionController::class, 'FruitCollectionNurseryTransport'])->name('sign.stage14');
     Route::get('Fruit-collection/truck-departure/{id}', [\App\Http\Controllers\FruitCollectionController::class, 'TruckDeparture'])->name('sign.stage15');
     Route::patch('/update/truck/departure-time/{id}', [\App\Http\Controllers\FruitCollectionController::class, 'UpdateTruckDepartureTime']);
+    
+    // Route::patch('Fruit-collection/collection-from-plus-trees/{id}', [\App\Http\Controllers\FruitCollectionController::class, 'updateStatus']);
+
+    // in fruit collection additional of status part
+    Route::post('/api/update-stockstimer', [StockTimerController::class, 'updateStatus']);
+
+
+
+    // Route::get('Fruit-collection/sign/collection-status/{id}', [\App\Http\Controllers\FruitCollectionController::class, 'FruitCollectionStatus'])->name('sign.stage12');
+
 
     //Fruit Storage
     Route::get('Fruit-storage/activities', [\App\Http\Controllers\FruitStorageController::class, 'FruitStorage'])->name('fruit-storage');
@@ -141,6 +181,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('seed-extraction/weighing-good-seed/{id}', [\App\Http\Controllers\SeedExtractionController::class, 'DistributionCrackingAndWeighing'])->name('sign.stage30');
     Route::get('seed-extraction/stock-issue-for-storage/{id}', [\App\Http\Controllers\SeedExtractionController::class, 'IssueForStorage'])->name('sign.stage31');
     Route::post('seed-extraction/{id}/stock-issue-for-storage', [\App\Http\Controllers\SeedExtractionController::class, 'StoreIssueForStorage']);
+
+
+    Route::post('/store-stock-issue', [SeedExtractionController::class, 'StoreStockIssue']);
 
     //Transport to another site
     Route::get('transport-to-other-sites/activities', [\App\Http\Controllers\TransportToOtherSiteController::class, 'SeedTransportation'])->name('seed-transportation');
@@ -292,6 +335,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('reports',[\App\Http\Controllers\ReportController::class,'index'])->name('reports.index');
     Route::get('reports/view/{id}/{item}',[\App\Http\Controllers\ReportController::class,'getReport'])->name('view.report');
     Route::get('excel-export',[\App\Http\Controllers\ReportController::class,'exportExcel'])->name('excel.export');
+
 });
 
 

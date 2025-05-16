@@ -251,16 +251,58 @@
                             </p>
                             </Link>
                         </li>
-                        <li class="nav-header">Roles</li>
+
+
+
+
+
+                        <li class="nav-header">Roles & Users</li>
+
+                        
                         <li class="nav-item">
-                            <a href="#" class="nav-link" :class="{ 'active': $page.url.startsWith('/manage-*') }">
+                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                 <i class="nav-icon fas fa-table"></i>
-                                <p>
-                                    Roles
+                        <p>
+                            Roles 
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
-                            </a>
-                            <ul class="nav nav-treeview">
+                        <b class="caret"></b>
+                    </a>
+
+                            <ul class="dropdown-menu dropdown-user">
+                        <li class="nav-item">
+                                    <Link :href="route('user.roles')" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Users Roles
+                                        <span class="badge badge-info right">UR</span>
+                                    </p>
+                                    </Link>
+                                </li>
+
+                                <li class="nav-item">
+                                    <Link :href="route('activity.roles')" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Activity Roles
+                                        <span class="badge badge-info right">AR</span>
+                                    </p>
+                                    </Link>
+                                </li>
+
+
+                                <!-- <li class="nav-item">
+                                    <Link :href="route('activity.roles')" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        View User
+                                        <span class="badge badge-info right">V</span>
+                                    </p>
+                                    </Link>
+                                </li> -->
+                    </ul>
+
+                            <!-- <ul class="dropdown-menu dropdown-user">
                                 <li class="nav-item">
                                     <Link :href="route('user.roles')" class="nav-link">
                                     <i class="nav-icon fas fa-users"></i>
@@ -279,7 +321,88 @@
                                     </p>
                                     </Link>
                                 </li>
-                            </ul>
+                            </ul> -->
+                        </li>
+
+
+
+
+
+
+
+
+                        <li class="nav-item">
+                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                                    Users
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                        <b class="caret"></b>
+                    </a>
+
+                            <ul class="dropdown-menu dropdown-user">
+                        <li class="nav-item">
+                                    <Link :href="route('user.users')" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Create User
+                                        <span class="badge badge-info right">C</span>
+                                    </p>
+                                    </Link>
+                                </li>
+
+                                <li class="nav-item">
+                                    <Link :href="route('activity.users')" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Edit User
+                                        <span class="badge badge-info right">E</span>
+                                    </p>
+                                    </Link>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <Link :href="route('activity.users')" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        View User
+                                        <span class="badge badge-info right">V</span>
+                                    </p>
+                                    </Link>
+                                </li>
+                    </ul>
+
+                            <!-- <ul class="dropdown-menu dropdown-user">
+                                <li class="nav-item">
+                                    <Link :href="route('user.roles')" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Users Roles
+                                        <span class="badge badge-info right">U</span>
+                                    </p>
+                                    </Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link :href="route('activity.roles')" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Activity Roles
+                                        <span class="badge badge-info right">A</span>
+                                    </p>
+                                    </Link>
+                                </li>
+                            </ul> -->
+                        </li>
+
+
+
+
+
+
+                        <li>
+                            <h1 class="nav-item" >JobCard Mukau</h1>
                         </li>
                     </ul>
                 </nav>
@@ -292,7 +415,9 @@
         <slot />
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2022 <a href="#">Better Globe Forestry LTD</a>.</strong>
+            <strong>Copyright &copy; 2025
+             <a href="https://betterglobeforestry.com" target="_blank">Better Globe Forestry LTD</a>.</strong>
+
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
                 <b>Prosperity with purpose</b>

@@ -40,7 +40,9 @@
                                             <div class="card-header flex justify-between">
                                                 <h3 class="card-title">Job Card Review</h3>
                                                 <p>Card No: {{ Jobcard.job_card_number }}</p>
-                                                <p>Site: {{ Jobcard.site }}</p>
+                                                <p>Project Name: {{ Jobcard.project_name }}</p>
+                                                <p>Site: {{ Jobcard.site }}</p>                                                <p>Project Name: {{ Jobcard.project_name }}</p>
+
                                             </div>
                                             <!-- /.card-header -->
                                             <div class="card-body">
@@ -111,12 +113,23 @@
                                                                 Signature Required at this stage
                                                             </p>
                                                             <div v-for="$role in Jobcard.childactivity.roles"
-                                                                :key="$role.id"
-                                                                class="flex justify-center items-center space-x-1">
-                                                                <label class="mt-2 text-sm font-bold">{{
-                                                                    $role.role
-                                                                }}</label>
-                                                            </div>
+                                                                            :key="$role.id"
+                                                                            class="flex items-center space-x-1">
+                                                                            <input type="checkbox"
+                                                                                v-model="form.signature"
+                                                                                :value="$role.id"
+                                                                                class="text-green-600 rounded-md focus:ring-0">
+                                                                            <label class="mt-2 text-sm font-bold">{{
+                                                                                    $role.role
+                                                                            }}</label>
+
+                                                                            <!-- <label>{{ $page.props.ActivityTitle }} Start Date:</label> -->
+                                                                            <Datepicker v-model="form.sign_time" position="left" ></Datepicker>
+                                                                               <p class="text-xs text-red-600 mt-2" v-if="form.errors.sign_time">
+                                                                                  {{ form.errors.sign_time }}
+                                                                                    </p>
+
+                                                                        </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -180,7 +193,7 @@ export default {
         },
         format_date(value) {
             if (value) {
-                return moment(String(value)).format('DD-MM-YYYY HH:mm')
+                return moment(String(value)).format('Y-m-d || H:mm:s')
             }
         },
     }

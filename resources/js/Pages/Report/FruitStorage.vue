@@ -147,7 +147,11 @@
                                                                         <label class="mt-2.5 text-xs font-bold"
                                                                             v-html="$signature.role.role"></label>
                                                                         <p class="text-gray-400"
-                                                                            v-html="$signature.user.name"></p>
+                                                                            v-html="$signature.user.name"></p> 
+                                                                            <p class="text-xs mt-1 text-green-500">
+                                                                            {{ activity.timelines[0].end_date }}
+                                                                                <!-- {{ activity.timelines[0].sign_time }} -->
+                                                                                </p>
                                                                     </div>
                                                                 </div>
 

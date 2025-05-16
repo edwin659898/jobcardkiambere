@@ -139,4 +139,121 @@ class RoleController extends Controller
         Excel::import(new ImportChildActivities, request()->file('file'));
         return redirect()->route('Dashboard');
     }
+
+
+
+
+
+
+
+    // users adding editing and viewing
+    public function editActivityUsers($id)
+    {
+        $activity = ChildActivity::findOrFail($id);
+        $currentRoles = DB::table('child_activity_role')
+            ->where(['child_activity_id' => $id])
+            ->pluck('role_id')
+            ->toArray();
+        $roles = Role::all();
+
+        return Inertia::render('Users/under/ActivityEdit', [
+            'Activity' => $activity,
+            'CurrentRoles' => $currentRoles,
+            'Roles' => $roles
+        ]);
+    }
+
+
+
+    public function ActivityUserIndex()
+    {
+        $activities = ChildActivity::query()
+            ->with('roles')
+            ->when(request()->input('search'), function ($query, $search) {
+                $query->Where('child_title', 'like', "%{$search}%");
+                $query->orWhereHas('roles', function ($query) use ($search) {
+                    $query->where('role', 'like', "%{$search}%");
+                });
+            })
+            ->paginate(10)
+            ->withQueryString()
+            ->through(fn ($activity) => [
+                'id' => $activity->id,
+                'name' => $activity->child_title,
+                'roles' => $activity->roles,
+            ]);
+
+        $AllRoles = Role::select('id', 'role')->get();
+
+        return Inertia::render('Users/under/ActivityTable', [
+            'Activities' => $activities,
+            'CreatedRoles' => $AllRoles,
+            'filters' => request()->all('search'),
+        ]);
+    }
+
+
+    public function editUser($id)
+    {
+        $user = User::findOrFail($id);
+        $currentRoles = DB::table('role_user')
+            ->where(['user_id' => $id])
+            ->pluck('role_id')
+            ->toArray();
+        $roles = Role::all();
+
+        return Inertia::render('Users/under/UserEdit', [
+            'User' => $user,
+            'CurrentRoles' => $currentRoles,
+            'Roles' => $roles
+        ]);
+    }
+
+
+
+    public function indexUsers()
+    {
+        $users = User::query()
+            ->with('roles')
+            ->when(request()->input('search'), function ($query, $search) {
+                $query->Where('name', 'like', "%{$search}%");
+                $query->Where('email', 'like', "%{$search}%");
+                $query->orWhere('site', 'like', "%{$search}%");
+                $query->orWhere('department', 'like', "%{$search}%");
+                $query->orWhereHas('roles', function ($query) use ($search) {
+                    $query->where('role', 'like', "%{$search}%");
+                });
+            })
+            ->paginate(10)
+            ->withQueryString()
+            ->through(fn ($user) => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'department' => $user->department,
+                'site' => $user->site,
+                'roles' => $user->roles,
+            ]);
+
+        $AllRoles = Role::select('id', 'role')->take(5)->latest()->get();
+
+        return Inertia::render('Users/under/UserTable', [
+            'Users' => $users,
+            'CreatedRoles' => $AllRoles,
+            'filters' => request()->all('search'),
+        ]);
+    }
+
+
+
+
+
+
+    public function destroy($id)
+{
+    $user = User::findOrFail($id);
+    $user->delete(); // Or soft delete if using SoftDeletes
+    return redirect()->back()->with('success', 'User deactivated successfully.');
+}
+
 }

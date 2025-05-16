@@ -87,7 +87,7 @@
                                                                         <td>{{ index + 1 }}</td>
                                                                         <td>{{ stock.fruit.tree.tree_number }}</td>
                                                                         <td>
-                                                                            {{ stock.quantity }}
+                                                                            Depulp {{ stock.quantity }}
                                                                         </td>
                                                                         <td>
                                                                             {{ format_date(stock.created_at) }}

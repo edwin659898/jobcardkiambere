@@ -69,7 +69,21 @@
                                                                         <div v-for="$role in Jobcard.childactivity.roles"
                                                                             :key="$role.id"
                                                                             class="flex items-center space-x-1">
-                                                                            <p class="mt-2 text-sm font-bold">{{ $role.role }}</p>
+                                                                            <input type="checkbox"
+                                                                                v-model="form.signature"
+                                                                                :value="$role.id"
+                                                                                class="text-green-600 rounded-md focus:ring-0">
+                                                                            <label class="mt-2 text-sm font-bold">{{
+                                                                                    $role.role
+                                                                            }}</label>
+
+                                                                            <!-- <label>{{ $page.props.ActivityTitle }} Start Date:</label> -->
+                                                                            <!-- position="left" altPosition (on the Datepicker bellow) -->
+                                                            <Datepicker v-model="form.signature_time" position="left" ></Datepicker>
+                                                            <p class="text-xs text-red-600 mt-2" v-if="form.errors.signature_time">
+                                                                {{ form.errors.signature_time }}
+                                                            </p>
+
                                                                         </div>
                                                                     </div>
                                                                 </div>

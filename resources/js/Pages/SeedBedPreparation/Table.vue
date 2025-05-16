@@ -57,7 +57,8 @@
                                                         <tr>
                                                             <th>Job card Name</th>
                                                             <th>Site</th>
-                                                            
+                                                            <th>Project Name</th>
+                                                            <th>Card No:</th>                                                            
                                                             <th>View</th>
                                                         </tr>
                                                     </thead>
@@ -65,6 +66,8 @@
                                                         <tr v-for="$card in currentCards" :key="$card.id">
                                                             <td>{{ $card.job_card_number }}</td>
                                                             <td>{{ $card.site }}</td>
+                                                            <td>{{ $card.job_card_number }}</td>
+                                                            <td>{{ $card.project_name }}</td>
 
                                                             <td>
                                                                 <Link

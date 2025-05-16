@@ -16,7 +16,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item active">Dashboard</li>
+                                <li class="breadcrumb-item active">Report</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -48,10 +48,10 @@
                                                     class="btn  btn-success mr-1 cursor-pointer">Export</button>
                                                 <select v-model="tree" @change="search()"
                                                     class="form-control text-sm w-64">
-                                                    <option value="">-- Filter by Tree --</option>
+                                                    <!-- <option value="">-- Filter by Tree --</option>
                                                     <option v-for="tree in Trees" :key="tree.id" :value="tree.id">{{
                                                         tree.tree_number
-                                                    }}</option>
+                                                    }}</option> -->
                                                 </select>
                                             </div>
                                             <div class="card-body">
@@ -77,8 +77,11 @@
                                                                         <th>ID</th>
                                                                         <th>Tree Number</th>
                                                                         <th>Quantity (Kg)</th>
-                                                                        <th>Start time</th>
-                                                                        <th>End time</th>
+                                                                        <th>Good (Kg)</th>
+                                                                        <th>Damaged (Kg)</th>
+                                                                        <th>Means of Transport</th>
+                                                                        <th>starting Time</th>
+                                                                        <th>Ending Time</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -86,6 +89,12 @@
                                                                         :key="index">
                                                                         <td>{{ index + 1 }}</td>
                                                                         <td>{{ stock.fruit.tree.tree_number }}</td>
+                                                                        <td>
+                                                                            {{ stock.quantity }}
+                                                                        </td>
+                                                                        <td>
+                                                                            {{ stock.quantity }}
+                                                                        </td>
                                                                         <td>
                                                                             {{ stock.quantity }}
                                                                         </td>

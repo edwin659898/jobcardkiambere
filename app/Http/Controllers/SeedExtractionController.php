@@ -197,6 +197,7 @@ class SeedExtractionController extends Controller
         return Inertia::render('SeedExtraction/StorageIssue', [
             'Jobcard' => $jobCard,
             'BeginDate' => $start_date,
+            // StoreStockIssue 
         ]);
     }
 
@@ -283,4 +284,96 @@ class SeedExtractionController extends Controller
 
         return $jobCard;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+     //issue from stock
+     public function StoreStockIssues($id)
+     {
+         $jobCard = $this->GetJobcard($id);
+         $start_date = $this->GetDate($id);
+ 
+         return Inertia::render('TransportToOtherSites/IssueFromStorage', [
+             'Jobcard' => $jobCard,
+             'BeginDate' => $start_date,
+         ]);
+     }
+ 
+     //store data for stock issue
+     public function StoreStockIssue(Request $request, $id)
+     {
+ 
+         $data = $request->validate([
+             'quantity' => 'required',
+         ]);
+ 
+         $fruit = Fruit::findOrFail($id);
+ 
+         $jobcard = JobCard::findOrFail($fruit->job_card_id);
+ 
+         $stock_available = StockControl::where('job_card_id', $jobcard->id)
+             ->where('tree_id', $fruit->tree_id)
+             ->where('child_activity_id', '<', Session::get('current_activity_id'))
+             ->orderBy('child_activity_id', 'Desc')
+             ->first();
+ 
+         abort_if(
+             !$stock_available || $stock_available->quantity_available < $request->quantity,
+             403,
+             'Quantity cannot be more than stock available'
+         );
+ 
+         $timeline = Timeline::where([
+             'job_card_id' => $jobcard->id,
+             'child_activity_id' => Session::get('current_activity_id')
+         ])->whereDate('created_at', Carbon::today())->first();
+ 
+         if (!$timeline) {
+             Timeline::create([
+                 'start_date' => Carbon::now()->format('Y-m-d, H:i:s'),
+                 'job_card_id' => $jobcard->id,
+                 'child_activity_id' => Session::get('current_activity_id')
+             ]);
+         }
+ 
+         Stock::create([
+             'fruit_id' => $fruit->id,
+             'job_card_id' => $jobcard->id,
+             'quantity' => $request->quantity,
+             'issued_by' => auth()->id(),
+             'child_activity_id' => Session::get('current_activity_id')
+         ]);
+ 
+         $stock_available->update([
+             'quantity_available' => $stock_available->quantity_available - (int)$request->quantity
+         ]);
+ 
+         return redirect()->back()->with('success', 'Update Successfully');
+     }
+ 
+     //store data for stock issue
+     public function ReceivedQuantitys(Request $request, $id)
+     {
+ 
+         $data = $request->validate([
+             'quantity' => 'required',
+         ]);
+ 
+ 
+         Stock::find($id)->update([
+             'damage_seed' => $request->quantity,
+             'received_by' => auth()->id(),
+         ]);
+ 
+         return redirect()->back()->with('success', 'Update Successfully');
+     }
 }

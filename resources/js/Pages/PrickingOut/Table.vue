@@ -56,15 +56,15 @@
                                                     <thead class="font-semibold">
                                                         <tr>
                                                             <th>Job card Name</th>
-                                                            <th>Site</th>
-                                                            
-                                                            <th>View</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr v-for="$card in currentCards" :key="$card.id">
-                                                            <td>{{ $card.job_card_number }}</td>
-                                                            <td>{{ $card.site }}</td>
+                                                                                                                        <th>Site</th>
+                                                                                                                        
+                                                                                                                        <th>View</th>
+                                                                                                                    </tr>
+                                                                                                                </thead>
+                                                                                                                <tbody>
+                                                                                                                    <tr v-for="$card in currentCards" :key="$card.id">
+                                                                                                                        <td>{{ $card.job_card_number }}</td>
+                                                                                                                        <td>{{ $card.site }}</td>
 
                                                             <td>
                                                                 <Link

@@ -41,6 +41,7 @@
                                             <div class="card-header flex justify-between">
                                                 <h3 class="card-title">Job Card Review</h3>
                                                 <p>Card No: {{ Jobcard.job_card_number }}</p>
+                                                <p>Project Name: {{ Jobcard.project_name }}</p>
                                                 <p>Site: {{ Jobcard.site }}</p>
                                             </div>
                                             <!-- /.card-header -->
@@ -51,6 +52,28 @@
                                                     {{ success }}
                                                 </div>
                                                 <div class="col-sm-12 pt-8 ">
+
+                                                    <!-- start -->
+                                                    <div v-if="clickOne"
+                                                                class="flex items-center justify-between space-x-2">
+                                                                <select class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                                                                v-model="form.start">
+                                                                    <option value="" disabled>Select an option</option>
+                                                                    <option value="1">Start Time</option>
+                                                                    <!-- <option value="0">Do Not Start Time</option> -->
+                                                                </select>
+                                                                <!-- <input type="number"
+                                                                    class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                                                    v-model="form.start" placeholder="Enter (1) to start time or (0) not to start time"> -->
+                                                                   
+
+                                                               <button :class="{ 'opacity-25': form.processing }" :disabled="form.processing"
+                                                                    class="inline-flex justify-center rounded-md border border-transparent px-3 py-1 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                                                                    Save
+                                                                </button>
+                                                            </div>
+                                                            <!-- end start time -->
+
                                                     <form>
                                                         <div class="form-group">
                                                             <label>{{ $page.props.ActivityTitle }} Start
@@ -86,7 +109,12 @@
                                                                     <tr>
                                                                         <th>No</th>
                                                                         <th>Tree Number</th>
+                                                                        <th>Time Click</th>
+                                                                        <th>Start </th>
                                                                         <th>Quantity Issued(No)</th>
+                                                                        <!-- <th>Issued</th> -->
+                                                                        <th>Received</th>
+                                                                        <th>End </th>
                                                                         <th>Action</th>
                                                                     </tr>
                                                                 </thead>
@@ -95,17 +123,60 @@
                                                                         :key="index">
                                                                         <td>{{ index + 1 }}</td>
                                                                         <td>{{ fruit.tree.tree_number }}</td>
+
+                                                                        <td>
+                                                                            <i @click="click(fruit.id)"
+                                                                                  class="fas fa-clock cursor-pointer text-green-500 hover:text-green-800"> 
+                                                                             </i>
+                                                                        </td>
+
+                                                                        <!-- start -->
+                                                                        <td>
+                                                                            <!-- <ol v-for="(stocktimer, index) in stockstimer" :key="index">
+                                                                                        <li class="flex justify-between">
+                                                                                            <p>{{ format_date(stocktimer.created_at) }}</p>
+                                                                                        </li>
+                                                                                    </ol> -->
+                                                                                    <ol v-for="stock, index in fruit.stocks"
+                                                                                :key="index">
+                                                                                <li class="flex justify-between">
+                                                                                    <!-- <p>{{ stock.quantity }}</p> -->
+                                                                                    <p>{{ format_date(stock.updated_at) }}</p>
+
+                                                                                </li>
+                                                                            </ol>
+                                                                            </td>
+
                                                                         <td>
                                                                             <ol v-for="stock, index in fruit.stocks" :key="index">
                                                                                     <li class="flex justify-between items-center space-x-3 mt-2">
-                                                                                        <p>Issued: {{ stock.quantity }}</p>
-                                                                                        <p>Received: {{ stock.damage_seed }}</p>
-                                                                                        <p>{{ format_date(stock.created_at) }}</p>
+                                                                                        <p>{{ stock.quantity }}</p>
+                                                                                        <!-- <p>Received: {{ stock.damage_seed }}</p>
+                                                                                        
                                                                                         <p> <i v-if="stock.damage_seed === null" @click.prevent="selected(stock.id,'receive')"
-                                                                                             class="fas fa-check text-blue-500 focus:text-blue-800 cursor-pointer"></i></p>
+                                                                                             class="fas fa-check text-blue-500 focus:text-blue-800 cursor-pointer"></i></p> -->
                                                                                     </li>
                                                                             </ol>
                                                                         </td>
+
+                                                                        <td> <ol v-for="stock, index in fruit.stocks" :key="index">
+                                                                                    <li class="flex justify-between items-center space-x-3 mt-2">
+                                                                                        <!-- <p>Issued: {{ stock.quantity }}</p> -->
+                                                                                        <p> {{ stock.damage_seed }}</p>
+                                                                                        
+                                                                                        <p> <i v-if="stock.damage_seed === null" @click.prevent="selected(stock.id,'receive')"
+                                                                                             class="fas fa-check text-blue-500 focus:text-blue-800 cursor-pointer"></i></p>
+                                                                                    </li>
+                                                                            </ol> </td>
+                                                                        <!-- end time -->
+                                                                        <td> <ol v-for="stock, index in fruit.stocks"
+                                                                                :key="index">
+                                                                                <li class="flex justify-between">
+                                                                                    <!-- <p>{{ stock.quantity }}</p> -->
+                                                                                    <p>{{ format_date(stock.created_at) }}</p>
+
+                                                                                </li>
+                                                                            </ol> </td>
                                                                         <td>
                                                                             <i @click="selected(fruit.id,'issue')"
                                                                                 class="fas fa-edit cursor-pointer text-green-500 hover:text-green-800"></i>
@@ -169,6 +240,10 @@ export default {
                 SelectedId: null,
                 type: '',
             }),
+            clickOne: false,
+            sign: {
+              signatures: this.$props.Signed,
+            },
             SelectedOne: false,
             start_date: this.$props.BeginDate,
         }
@@ -200,11 +275,17 @@ export default {
             this.form.SelectedId = id;
             this.form.type = type;
         },
-        format_date(value){
-         if (value) {
-           return moment(String(value)).format('DD-MM-YYYY')
-          }
-      },
+        click(id) {
+            this.form.start = null;
+            // this.form.quantityNotOk = null;
+            this.clickOne = true;
+            this.form.SelectedId = id;
+        },
+        format_date(value) {
+            if (value) {
+                return moment(String(value)).format('DD-MM-YYYY || HH:mm:ss')
+            }
+        },
     }
 }
 </script>

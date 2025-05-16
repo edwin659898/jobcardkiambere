@@ -41,6 +41,7 @@
                                             <div class="card-header flex justify-between">
                                                 <h3 class="card-title">Job Card Review</h3>
                                                 <p>Card No: {{ Jobcard.job_card_number }}</p>
+                                                <p>Project Name: {{ Jobcard.project_name }}</p>
                                                 <p>Site: {{ Jobcard.site }}</p>
                                             </div>
                                             <!-- /.card-header -->
@@ -51,6 +52,30 @@
                                                     {{ success }}
                                                 </div>
                                                 <div class="col-sm-12 pt-8 ">
+                                                    <!-- start -->
+                                                    <div v-if="clickOne"
+                                                                class="flex items-center justify-between space-x-2">
+                                                                <select class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                                                                v-model="form.start">
+                                                                    <option value="" disabled>Select an option</option>
+                                                                    <option value="1">Start Time</option>
+                                                                    <!-- <option value="0">Do Not Start Time</option> -->
+                                                                </select>
+                                                                <!-- <input type="number"
+                                                                    class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                                                    v-model="form.start" placeholder="Enter (1) to start time or (0) not to start time"> -->
+                                                                   
+
+                                                               <button :class="{ 'opacity-25': form.processing }" :disabled="form.processing"
+                                                                    class="inline-flex justify-center rounded-md border border-transparent px-3 py-1 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                                                                    Save
+                                                                </button>
+                                                            </div>
+                                                            <p class="text-xs text-red-600 mt-2"
+                                                                v-if="form.errors.start">{{ form.errors.start
+                                                                }}
+                                                            </p>
+                                                    <!-- end time -->
                                                     <form @submit.prevent="update()">
                                                         <div class="form-group">
                                                             <label>{{ $page.props.ActivityTitle }} Start
@@ -58,18 +83,42 @@
                                                             <Datepicker v-model="start_date" position="left"
                                                                 altPosition></Datepicker>
                                                         </div>
+
                                                         
                                                         <div class="flex flex-col rounded-md shadow-lg px-3 py-2 pt-3">
+                                                            <!-- <div v-if="clickOne"
+                                                                class="flex items-center justify-between space-x-2">
+                                                                <input type="number"
+                                                                    class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                                                    v-model="form.start" placeholder="Enter (1) to start time and (0) not to start time">
+                                                                   
+
+                                                               <button :class="{ 'opacity-25': form.processings }" :disabled="form.processings"
+                                                                    class="inline-flex justify-center rounded-md border border-transparent px-3 py-1 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                                                                    Save
+                                                                </button>
+                                                            </div>
+                                                            <p class="text-xs text-red-600 mt-2"
+                                                                v-if="form.errors.start">{{ form.errors.start
+                                                                }}
+                                                            </p> -->
+                                                        
+
+
 
                                                             <div v-if="SelectedOne" class="flex items-center justify-between space-x-2">
+
                                                                 <input type="number"
                                                                     class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                                                                     v-model="form.quantity"  step=".01" placeholder="Quantity Measured">
+                                                                   
+                                                        
                                                                <button :class="{ 'opacity-25': form.processing }" :disabled="form.processing"
                                                                     class="inline-flex justify-center rounded-md border border-transparent px-3 py-1 bg-blue-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                                                                     Save
                                                                 </button>
                                                             </div>
+
                                                             <p class="text-xs text-red-600 mt-2"
                                                                 v-if="form.errors.quantity">{{ form.errors.quantity
                                                                 }}
@@ -80,7 +129,10 @@
                                                                     <tr>
                                                                         <th>No</th>
                                                                         <th>Tree Number</th>
-                                                                        <th>Kg Collected</th>
+                                                                        <th>Time Click</th>
+                                                                        <th>Start </th>
+                                                                        <th>No. of Fruits Collected</th>
+                                                                        <th>End</th>
                                                                         <th>Action</th>
                                                                     </tr>
                                                                 </thead>
@@ -88,25 +140,95 @@
                                                                     <tr v-for="(fruit, index) in Jobcard.fruits" :key="index">
                                                                         <td>{{ index + 1 }}</td>
                                                                         <td>{{ fruit.tree.tree_number }}</td>
+                                                                        
+                                                                        <td>
+                                                                            <i @click="click(fruit.id)"
+                                                                                  class="fas fa-clock cursor-pointer text-green-500 hover:text-green-800"> 
+                                                                             </i>
+                                                                        </td>
+                                                                        <!-- start -->
+                                                                        <td>
+                                                                            <!-- <ol v-for="(stocktimer, index) in stockstimer" :key="index">
+                                                                                        <li class="flex justify-between">
+                                                                                            <p>{{ format_date(stocktimer.created_at) }}</p>
+                                                                                        </li>
+                                                                                    </ol> -->
+                                                                                    <ol v-for="stock, index in fruit.stocks"
+                                                                                :key="index">
+                                                                                <li class="flex justify-between">
+                                                                                    <!-- <p>{{ stock.quantity }}</p> -->
+                                                                                    <p>{{ format_date(stock.updated_at) }}</p>
+
+                                                                                </li>
+                                                                            </ol>
+                                                                            </td>
+                                                                            <!-- no of fruits -->
                                                                         <td>
                                                                             <ol v-for="stock, index in fruit.stocks"
                                                                                 :key="index">
                                                                                 <li class="flex justify-between">
                                                                                     <p>{{ stock.quantity }}</p>
-                                                                                    <p>{{ format_date(stock.created_at) }}</p>
                                                                                 </li>
                                                                             </ol>
                                                                         </td>
+                                                                        
+                                                                        <!-- end -->
+                                                                        <td><ol v-for="stock, index in fruit.stocks"
+                                                                                :key="index">
+                                                                                <li class="flex justify-between">
+                                                                                    <!-- <p>{{ stock.quantity }}</p> -->
+                                                                                    <p>{{ format_date(stock.created_at) }}</p>
+
+                                                                                </li>
+                                                                            </ol></td>
+                                                                        <!-- action -->
                                                                         <td>
                                                                             <i @click="selected(fruit.id)"
                                                                                 class="fas fa-edit cursor-pointer text-green-500 hover:text-green-800"></i>
                                                                         </td>
+                                                                        <!-- time click -->
+                                                                        
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
 
                                                         </div>
                                                     </form>
+
+                                                    <div class="flex justify-center pt-12">
+                                                        <div class="block bg-white max-w-sm text-center">
+                                                            <div class="py-2 px-6 border-b border-gray-300">
+                                                                Signature
+                                                            </div>
+                                                            <div class="p-6">
+                                                                <p class="text-gray-700 text-xs mb-4">
+                                                                    Signature Required at this stage
+                                                                </p>
+                                                                <div v-for="$role in Jobcard.childactivity.roles"
+                                                                    :key="$role.id" class="flex justify-center items-center space-x-1">
+                                                                    <input type="checkbox"
+                                                                              v-model="form.signature"
+                                                                              :value="$role.id"
+                                                                              class="text-green-600 rounded-md focus:ring-0">
+                                                                    <label class="mt-2 text-sm font-bold">{{
+                                                                        $role.role
+                                                                        }}</label>
+
+                                                                        <!-- <label>{{ $page.props.ActivityTitle }} Start Date:</label> -->
+                                                            <!-- <Datepicker v-model="form.sign_time" position="left" ></Datepicker>
+                                                            <p class="text-xs text-red-600 mt-2" v-if="form.errors.sign_time">
+                                                                {{form.errors.sign_time}}
+                                                            </p> -->
+                                                            <!-- position="left" altPosition (on the Datepicker bellow) -->
+                                                            <Datepicker v-model="form.sign_time" position="left" ></Datepicker>
+                                                                               <p class="text-xs text-red-600 mt-2" v-if="form.errors.sign_time">
+                                                                                  {{ form.errors.sign_time }}
+                                                                                    </p>
+                                                            
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
 
                                                     <div class="flex justify-end mt-4">
@@ -150,16 +272,27 @@ export default {
         Jobcard: Object,
         BeginDate: String,
         success: String,
+        // added >
     },
     data() {
         return {
             form: this.$inertia.form({
                 quantity: null,
+                endDate: null,
                 SelectedId: null,
+                // addded status
+                stockstimer: [],
             }),
             SelectedOne: false,
             start_date: this.$props.BeginDate,
-        }
+
+            // added status
+            clickOne: false,
+            sign: {
+              signatures: this.$props.Signed,
+            },
+            start_date: this.$props.BeginDate,
+        };
     },
     methods: {
         update() {
@@ -168,24 +301,79 @@ export default {
                 preserveScroll: true 
             });
         },
+
+        // unkown add
+        submitDates() {
+        // Logic to handle the submission of the updated `fruit.stocks`
+        console.log(this.fruit.stocks);
+        // You can make an API call here to save the data to your backend
+    },
+    // unkown add
         complete(id) {
             Inertia.get(route("complete.labelling", id));
         },
-        destroy(id) {
+        destroy(id){
             if (confirm("Are you sure you want to remove")) {
                 Inertia.delete(route("destroy.stockIssue", id));
             }
         },
+
         selected(id){
             this.form.quantity = null;
+            // this.form.endDate = null;
             this.SelectedOne = true;
             this.form.SelectedId = id;
         },
+        click(id) {
+            this.form.start = null;
+            // this.form.quantityNotOk = null;
+            this.clickOne = true;
+            this.form.SelectedId = id;
+        },
+
         format_date(value) {
             if (value) {
-                return moment(String(value)).format('DD-MM-YYYY')
+                return moment(String(value)).format('Y-m-d || H:mm:s')
             }
         },
+
+        // timestapt status changes
+    // timestamp(id){
+    //         if (confirm("Are you sure you want to Start")) {
+    //             Inertia.updateStatus(route("start.updateStatus", id));
+    //         }
+    //     },
+
+        
+    confirmTimestamp(id) {
+    // Display a confirmation dialog
+    if (confirm("Do you want to start this timer?")) {
+      // User clicked "Yes", proceed to update the status
+      this.updateStatus(id, 1);  // Set status to 1 (Yes)
+    } else {
+      // User clicked "No", set status accordingly
+      this.updateStatus(id, 0);  // Set status to 0 (No)
+    }
+  },
+  
+  updateStatus(id, status) {
+    // Call the API or use Axios to send the request to update the database
+    axios.post('/api/update-stockstimer', {
+      id: id,
+      status: status
+    })
+    .then(response => {
+      // Handle success, maybe refresh the list or notify the user
+      console.log('Status updated successfully');
+    })
+    .catch(error => {
+      // Handle any errors
+      console.error('Error updating status', error);
+    });
+  }
+  
+//   timestamp 
+
     }
 }
 </script>

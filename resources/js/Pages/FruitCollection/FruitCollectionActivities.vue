@@ -1,6 +1,8 @@
 <template>
 
     <Head title="Operational Planning" />
+    
+    <!-- FRUITCOLLECTION-Activity KIAMBERE -->
 
     <BreezeAuthenticatedLayout>
         <div class="content-wrapper">
@@ -75,11 +77,19 @@
 <script>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
 import { Head, Link } from '@inertiajs/inertia-vue3';
+import Record from '@/Components/Record.vue'
+import Datepicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
+
 export default {
-    components: { BreezeAuthenticatedLayout, Head, Link },
+    components: { BreezeAuthenticatedLayout, Head, Link, Datepicker, Record },
     props: {
         data: Object,
         success: String,
+        // added Detepicker, record
+        Jobcard: Object,
+        Signed: Object,
+        BeginDate: String,
     },
 }
 </script>

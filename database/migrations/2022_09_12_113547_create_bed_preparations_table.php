@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('quantity')->nullable();
             $table->string('uom')->nullable();
             $table->string('extra_information')->nullable();
-            $table->unsignedBigInteger('tree_id');
+            $table->unsignedBigInteger('tree_id')->nullable();
             $table->timestamps();
         });
     }

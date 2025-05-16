@@ -41,7 +41,9 @@
                                             <div class="card-header flex justify-between">
                                                 <h3 class="card-title">Job Card Review</h3>
                                                 <p>Card No: {{ Jobcard.job_card_number }}</p>
-                                                <p>Site: {{ Jobcard.site }}</p>
+                                                <p>Project Name: {{ Jobcard.project_name }}</p>
+                                                <p>Site: {{ Jobcard.site }}</p>                                                <p>Project Name: {{ Jobcard.project_name }}</p>
+
                                             </div>
                                             <!-- /.card-header -->
                                             <div class="card-body">
@@ -83,13 +85,22 @@
                                                                     <tr>
                                                                         <th>ID</th>
                                                                         <th>Tree Number</th>
+                                                                        <th>Startig Time</th>
+                                                                        <!-- <th>Ending Time</th> -->
                                                                         <th>Action</th>
+
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr v-for="(tree, index) in Jobcard.fruits" :key="index">
                                                                         <td>{{ index + 1 }}</td>
                                                                         <td>{{ tree.tree.tree_number }}</td>
+                                                                        <td>
+                                                                            {{format_date(form.startDate) }}
+                                                                            <!-- <p>{{ format_date(stock.created_at) }}</p> -->
+
+                                                                        </td>
+                                                                        <!-- <td>{{ form.endDate }}</td> -->
                                                                         <td>
                                                                             <i @click="destroy(tree.id)"
                                                                                 class="fas fa-trash cursor-pointer text-red-500 hover:text-red-800"></i>
@@ -99,7 +110,7 @@
                                                             </table>
 
                                                         </div>
-                                                    </form>
+                                                    </form>                                                  
 
 
                                                     <div class="flex justify-end mt-4">
@@ -108,6 +119,51 @@
                                                             Sign
                                                         </button>
                                                     </div>
+
+                                                    <div class="flex flex-col justify-between">
+                                                          
+                                                          <div class="flex justify-center">
+                                                              <div class="block bg-white max-w-sm text-center">
+                                                                  <div class="py-2 px-6 border-b border-gray-300">
+                                                                      Signature
+                                                                  </div>
+                                                                  <p class="text-xs text-red-600 mt-2"
+                                                                      v-if="form.errors.signature">{{
+                                                                              form.errors.signature
+                                                                      }}</p>
+                                                                  <div class="p-6">
+                                                                      <p class="text-gray-700 text-xs mb-4">
+                                                                          Sign to confirm below that you approve
+                                                                          document
+                                                                      </p>
+                                                                      <div v-for="$role in Jobcard.childactivity.roles"
+                                                                          :key="$role.id"
+                                                                          class="flex items-center space-x-1">
+                                                                          <input type="checkbox"
+                                                                              v-model="form.signature"
+                                                                              :value="$role.id"
+                                                                              class="text-green-600 rounded-md focus:ring-0">
+                                                                          <label class="mt-2 text-sm font-bold">{{
+                                                                                  $role.role
+                                                                          }}</label>
+
+                                                          <!-- <Datepicker v-model="form.sign_time" position="left" altPosition></Datepicker>
+                                                          <p class="text-xs text-red-600 mt-2" v-if="form.errors.sign_time">
+                                                              {{ form.errors.sign_time }}
+                                                          </p> -->
+                                                          <!-- position="left" altPosition (on the Datepicker bellow) -->
+                                                          <Datepicker v-model="form.sign_time" position="left" ></Datepicker>
+                                                                               <p class="text-xs text-red-600 mt-2" v-if="form.errors.sign_time">
+                                                                                  {{ form.errors.sign_time }}
+                                                                                    </p>
+                                                          
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+
+                                                      </div>
+                                                    <!-- added signature -->
                                                 </div>
 
                                             </div>
@@ -135,8 +191,9 @@ import { Head, Link } from '@inertiajs/inertia-vue3';
 import { Inertia } from "@inertiajs/inertia";
 import Record from '@/Components/Record.vue'
 import Datepicker from '@vuepic/vue-datepicker';
-import '@vuepic/vue-datepicker/dist/main.css'
-import VueMultiselect from 'vue-multiselect'
+import '@vuepic/vue-datepicker/dist/main.css';
+import VueMultiselect from 'vue-multiselect';
+
 
 export default {
     components: { BreezeAuthenticatedLayout, Head, Link, Datepicker, Record, VueMultiselect },
@@ -144,6 +201,8 @@ export default {
         Jobcard: Object,
         success: String,
         BeginDate: String,
+        Signed: Object,
+        
         Trees: {
             type: Array,
             default: () => []
@@ -155,11 +214,17 @@ export default {
             form: this.$inertia.form({
                 treeNumber: [],
                 startDate: this.$props.BeginDate,
+                signature: this.$props.Signed,
             }),
 
         }
     },
     methods: {
+        format_date(value) {
+            if (value) {
+                return moment(String(value)).format('Y-m-d || H:mm:s')
+            }
+        },
         update(id) {
             this.form.patch(`/save/tree-number/${id}`, { preserveScroll: true });
             this.form.treeNumber = null;
@@ -174,6 +239,12 @@ export default {
         },
         onSelectedTree(id) {
             this.form.treeNumber.push(id);
+        },
+        format_date(value) {
+            if (value) {
+                return moment(String(value)).format('Y-m-d H:i:s')
+                // return \Carbon\Carbon::parse($date)->format('Y-m-d H:i:s'); 
+            }
         },
     }
 }

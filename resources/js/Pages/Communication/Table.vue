@@ -58,6 +58,7 @@
                                                             <th>Job card Name</th>
                                                             <th>Site</th>
                                                             <th>Start Date</th>
+                                                            <th>Project name</th>
                                                             <th>Planning Progress</th>
                                                             <th>End Date</th>
                                                             <th>View</th>
@@ -68,6 +69,7 @@
                                                             <td>{{ $card.job_card_number }}</td>
                                                             <td>{{ $card.site }}</td>
                                                             <td>{{ $card.start_date }}</td>
+                                                            <td>{{ $card.project_name }}</td>
                                                             <td>
                                                                 <div class="progress progress-xs">
                                                                     <div class="progress-bar progress-bar-primary"

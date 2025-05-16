@@ -40,6 +40,8 @@
 
                                             <div class="card-header flex justify-between">
                                                 <h3 class="card-title">Job Card Review</h3>
+                                                <p>Card No: {{ Jobcard.job_card_number }}</p>
+                                                <p>Project Name: {{ Jobcard.project_name }}</p>
                                                 <p>Site: {{ Jobcard.site }}</p>
                                             </div>
                                             <!-- /.card-header -->

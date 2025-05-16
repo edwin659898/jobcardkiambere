@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('departure_time')->nullable();
             $table->string('nursery_arrival_time')->nullable();
             $table->timestamps();
+            $table->string('transport');
         });
     }
 

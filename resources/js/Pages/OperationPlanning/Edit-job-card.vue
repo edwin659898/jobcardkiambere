@@ -41,6 +41,8 @@
                                             <div class="card-header flex justify-between">
                                                 <h3 class="card-title">Job Card Review</h3>
                                                 <p>Site: {{ Jobcard.site }}</p>
+                                                <p>Project Name: {{ Jobcard.project_name }}</p>
+                                                <p> Card No:{{ Jobcard.job_card_number }}</p>
                                             </div>
                                             <!-- /.card-header -->
                                             <div class="card-body">
@@ -146,6 +148,14 @@
                                                                             <label class="mt-2 text-sm font-bold">{{
                                                                                     $role.role
                                                                             }}</label>
+
+                                                                            <!-- <label>{{ $page.props.ActivityTitle }} Start Date:</label> -->
+                                                                            <!-- position="left" altPosition (on the Datepicker bellow) -->
+                                                                            <Datepicker v-model="form.sign_time" position="left" ></Datepicker>
+                                                                               <p class="text-xs text-red-600 mt-2" v-if="form.errors.sign_time">
+                                                                                  {{ form.errors.sign_time }}
+                                                                                    </p>
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -201,6 +211,7 @@ export default {
                 locations: [],
                 records: this.$props.Records,
                 signature: this.$props.Signed,
+                // signature_time: [],
             }),
             collectRecords: this.$props.ConfirmedLocations,
         }

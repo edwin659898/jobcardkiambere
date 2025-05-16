@@ -40,8 +40,9 @@
 
                                             <div class="card-header flex justify-between">
                                                 <h3 class="card-title">Job Card Review</h3>
-                                                <p>Card No: {{  Jobcard.job_card_number  }}</p>
-                                                <p>Site: {{  Jobcard.site  }}</p>
+                                                <p>Card No: {{ Jobcard.job_card_number }}</p>
+                                                <p>Project Name: {{ Jobcard.project_name }}</p>
+                                                <p>Site: {{ Jobcard.site }}</p>
                                             </div>
                                             <!-- /.card-header -->
                                             <div class="card-body">
@@ -51,6 +52,27 @@
                                                     {{  success  }}
                                                 </div>
                                                 <div class="col-sm-12 pt-8 ">
+
+                                                    <div v-if="clickOne"
+                                                                class="flex items-center justify-between space-x-2">
+                                                                <select class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                                                                v-model="form.start">
+                                                                    <option value="" disabled>Select an option</option>
+                                                                    <option value="1">Start Time</option>
+                                                                    <!-- <option value="0">Do Not Start Time</option> -->
+                                                                </select>
+                                                                <!-- <input type="number"
+                                                                    class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                                                    v-model="form.start" placeholder="Enter (1) to start time or (0) not to start time"> -->
+                                                                   
+
+                                                               <button :class="{ 'opacity-25': form.processing }" :disabled="form.processing"
+                                                                    class="inline-flex justify-center rounded-md border border-transparent px-3 py-1 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                                                                    Save
+                                                                </button>
+                                                            </div>
+
+
                                                     <form @submit.prevent="update()">
                                                         <div class="form-group">
                                                             <label>{{  $page.props.ActivityTitle  }} Start
@@ -95,7 +117,10 @@
                                                                     <tr>
                                                                         <th>No</th>
                                                                         <th>Tree Number</th>
+                                                                        <th>Time Click</th>
+                                                                        <th>Startig Time</th>
                                                                         <th>Quantity (Kgs)</th>
+                                                                        <th>Ending Time</th>
                                                                         <th>Action</th>
                                                                     </tr>
                                                                 </thead>
@@ -105,13 +130,41 @@
                                                                         <td>{{  index + 1  }}</td>
                                                                         <td>{{  fruit.tree.tree_number  }}</td>
                                                                         <td>
+                                                                            <i @click="click(fruit.id)"
+                                                                                  class="fas fa-clock cursor-pointer text-green-500 hover:text-green-800"> 
+                                                                             </i>
+                                                                        </td> 
+                                                                        <td>
+                                                                            <ol v-for="stock, index in fruit.stocks"
+                                                                                :key="index">
+                                                                                <li class="flex justify-between">
+                                                                                    <!-- <p>Good - {{  stock.quantity  }}</p>
+                                                                                    <p>Rejected - {{  stock.damage_seed  }}
+                                                                                    </p> -->
+                                                                                    <p>{{  format_date(stock.created_at)  }}</p>
+                                                                                </li>
+                                                                            </ol>
+                                                                        </td>
+                                                                        <td>
                                                                             <ol v-for="stock, index in fruit.stocks"
                                                                                 :key="index">
                                                                                 <li class="flex justify-between">
                                                                                     <p>Good - {{  stock.quantity  }}</p>
                                                                                     <p>Rejected - {{  stock.damage_seed  }}
                                                                                     </p>
-                                                                                    <p>{{  format_date(stock.created_at)  }}</p>
+                                                                                    <!-- <p>{{  format_date(stock.created_at)  }}</p> -->
+                                                                                </li>
+                                                                            </ol>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <ol v-for="stock, index in fruit.stocks"
+                                                                                :key="index">
+                                                                                <li class="flex justify-between">
+                                                                                    <!-- <p>Good - {{  stock.quantity  }}</p>
+                                                                                    <p>Rejected - {{  stock.damage_seed  }}
+                                                                                    </p> -->
+                                                                                    <p>{{  format_date(stock.updated_at)  }}</p>
                                                                                 </li>
                                                                             </ol>
                                                                         </td>
@@ -177,6 +230,10 @@ export default {
                 Badquantity: null,
                 SelectedId: null,
             }),
+            clickOne: false,
+            sign: {
+              signatures: this.$props.Signed,
+            },
             SelectedOne: false,
             start_date: this.$props.BeginDate,
         }
@@ -202,9 +259,15 @@ export default {
             this.SelectedOne = true;
             this.form.SelectedId = id;
         },
+        click(id) {
+            this.form.start = null;
+            // this.form.quantityNotOk = null;
+            this.clickOne = true;
+            this.form.SelectedId = id;
+        },
         format_date(value) {
             if (value) {
-                return moment(String(value)).format('DD-MM-YYYY')
+                return moment(String(value)).format('Y-m-d || H:mm:s')
             }
         },
     }

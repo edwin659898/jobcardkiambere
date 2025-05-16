@@ -118,6 +118,11 @@
                                                                             class="flex items-center space-x-1">
                                                                             <p class="mt-2 text-sm font-bold">{{
                                                                             $role.role }}</p>
+
+                                                                            <Datepicker v-model="form.sign_time" position="left" ></Datepicker>
+                                                          <p class="text-xs text-red-600 mt-2" v-if="form.errors.sign_time">
+                                                              {{ form.errors.sign_time }}
+                                                          </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>

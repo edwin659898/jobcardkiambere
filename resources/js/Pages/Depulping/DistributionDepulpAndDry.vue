@@ -41,6 +41,7 @@
                                             <div class="card-header flex justify-between">
                                                 <h3 class="card-title">Job Card Review</h3>
                                                 <p>Card No: {{ Jobcard.job_card_number }}</p>
+                                                <p>Project Name: {{ Jobcard.project_name }}</p>
                                                 <p>Site: {{ Jobcard.site }}</p>
                                             </div>
                                             <!-- /.card-header -->
@@ -51,6 +52,27 @@
                                                     {{ success }}
                                                 </div>
                                                 <div class="col-sm-12 pt-8 ">
+
+                                                    <div v-if="clickOne"
+                                                                class="flex items-center justify-between space-x-2">
+                                                                <select class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                                                                v-model="form.start">
+                                                                    <option value="" disabled>Select an option</option>
+                                                                    <option value="1">Start Time</option>
+                                                                    <!-- <option value="0">Do Not Start Time</option> -->
+                                                                </select>
+                                                                <!-- <input type="number"
+                                                                    class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                                                    v-model="form.start" placeholder="Enter (1) to start time or (0) not to start time"> -->
+                                                                   
+
+                                                               <button :class="{ 'opacity-25': form.processing }" :disabled="form.processing"
+                                                                    class="inline-flex justify-center rounded-md border border-transparent px-3 py-1 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                                                                    Save
+                                                                </button>
+                                                            </div>
+
+
                                                     <form @submit.prevent="update()">
                                                         <div class="form-group">
                                                             <label>{{ $page.props.ActivityTitle }} Start
@@ -82,6 +104,8 @@
                                                                     <tr>
                                                                         <th>No</th>
                                                                         <th>Tree Number</th>
+                                                                        <!-- <th>Time Click</th> -->
+                                                                        <!-- <th>Start </th> -->
                                                                         <th>Quantity Measures (kg/nuts)</th>
                                                                         <th>Action</th>
                                                                     </tr>
@@ -91,12 +115,22 @@
                                                                         :key="index">
                                                                         <td>{{ index + 1 }}</td>
                                                                         <td>{{ fruit.tree.tree_number }}</td>
+
+                                                                        <!-- <td>
+                                                                            <i @click="click(fruit.id)"
+                                                                                  class="fas fa-clock cursor-pointer text-green-500 hover:text-green-800"> 
+                                                                             </i>
+                                                                        </td> -->
+
+                                                                        <!-- start -->
+                                                                        
+                                                                            <!-- no of fruits -->
                                                                         <td>
                                                                             <ol v-for="stock, index in fruit.stocks"
                                                                                 :key="index">
                                                                                 <li class="flex justify-between">
                                                                                     <p>{{ stock.quantity }}</p>
-                                                                                    <p>{{ format_date(stock.created_at) }}</p>
+                                                                                    <!-- <p>{{ format_date(stock.created_at) }}</p> -->
                                                                                 </li>
                                                                             </ol>
                                                                         </td>
@@ -110,6 +144,32 @@
 
                                                         </div>
                                                     </form>
+
+                                                    <div class="p-6">
+                                                                <p class="text-gray-700 text-xs mb-4">
+                                                                    Sign to confirm below that you approve
+                                                                    document
+                                                                </p>
+                                                                <div v-for="$role in Jobcard.childactivity.roles"
+                                                                            :key="$role.id"
+                                                                            class="flex items-center space-x-1">
+                                                                            <input type="checkbox"
+                                                                                v-model="form.signature"
+                                                                                :value="$role.id"
+                                                                                class="text-green-600 rounded-md focus:ring-0">
+                                                                            <label class="mt-2 text-sm font-bold">{{
+                                                                                    $role.role
+                                                                            }}</label>
+
+                                                                            <!-- <label>{{ $page.props.ActivityTitle }} Start Date:</label> -->
+                                                                            <!-- position="left" altPosition (on the Datepicker bellow) -->
+                                                            <Datepicker v-model="form.signature_time" position="left"></Datepicker>
+                                                            <p class="text-xs text-red-600 mt-2" v-if="form.errors.signature_time">
+                                                                {{ form.errors.signature_time }}
+                                                            </p>
+
+                                                                        </div>
+                                                            </div>
 
                                                     <div class="flex justify-end mt-4">
                                                         <button @click="complete(Jobcard.id)"
@@ -163,6 +223,12 @@ export default {
             }),
             SelectedOne: false,
             start_date: this.$props.BeginDate,
+      // added status
+            clickOne: false,
+            sign: {
+              signatures: this.$props.Signed,
+            },
+            start_date: this.$props.BeginDate,
         }
     },
     methods: {
@@ -186,9 +252,16 @@ export default {
             this.SelectedOne = true;
             this.form.SelectedId = id;
         },
+        click(id) {
+            this.form.start = null;
+            // this.form.quantityNotOk = null;
+            this.clickOne = true;
+            this.form.SelectedId = id;
+        },
+
         format_date(value) {
             if (value) {
-                return moment(String(value)).format('DD-MM-YYYY')
+                return moment(String(value)).format('Y-m-d || H:mm:s')
             }
         },
     }

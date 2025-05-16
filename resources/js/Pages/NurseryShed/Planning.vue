@@ -82,6 +82,11 @@
                                                                             <label class="mt-2 text-sm font-bold">{{
                                                                                     $role.role
                                                                             }}</label>
+
+                                                                            <Datepicker v-model="form.sign_time" position="left" ></Datepicker>
+                                                          <p class="text-xs text-red-600 mt-2" v-if="form.errors.sign_time">
+                                                              {{ form.errors.sign_time }}
+                                                          </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>

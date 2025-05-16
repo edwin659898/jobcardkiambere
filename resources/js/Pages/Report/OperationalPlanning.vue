@@ -16,7 +16,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item active">Dashboard</li>
+                                <li class="breadcrumb-item active">Report</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -48,10 +48,10 @@
                                                     class="btn  btn-success mr-1 cursor-pointer">Export</button>
                                                 <select v-model="tree" @change="search()"
                                                     class="form-control text-sm w-64">
-                                                    <option value="">-- Filter by Tree --</option>
+                                                    <!-- <option value="">-- Filter by Tree --</option>
                                                     <option v-for="tree in Trees" :key="tree.id" :value="tree.id">{{
                                                         tree.tree_number
-                                                    }}</option>
+                                                    }}</option> -->
                                                 </select>
                                             </div>
                                             <div class="card-body">
@@ -133,6 +133,28 @@
                                                             </table>
                                                         </div>
                                                     </div>
+
+                                                    <!-- Documents Signed -->
+
+                                                    <div class="p-6">
+                                                                <p class="text-gray-700 text-xs mb-2"> All Documents</p>
+                                                                <p class="text-gray-400">Email: BUHBUHBUH<br>Meeting Minutes: BUHBUHBUH<br>Work Plans: BUHBUHBUH<br>Budgets: BUHBUHBUH<br></p>
+
+                                                                <p class="text-gray-400">{{ activity.timelines[0].sign_time }} </p>
+
+                                                                <div v-for="$record in activity.record"
+                                                                    :key="$record.id">
+                                                                    <div v-if="activity.id == $record.child_activity_id"
+                                                                        class="flex justify-between items-center space-x-2">
+                                                                        <label class="mt-2.5 text-xs font-bold"
+                                                                            v-html="$record.record"></label>
+                                                                        <p class="text-gray-400"
+                                                                            v-html="collectRecords.record.id"></p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <!-- Documents Signed -->
 
                                                     <div class="flex justify-center" v-if="activity.timelines.length">
                                                         <div class="block bg-white text-center">
