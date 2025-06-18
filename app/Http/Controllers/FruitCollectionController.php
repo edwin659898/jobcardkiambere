@@ -268,6 +268,12 @@ class FruitCollectionController extends Controller
         $jobCard = $this->GetJobcard($id);
         $start_date = $this->GetDate($id);
         $trucks = Truck::where(['site' => $jobCard->site])->get();
+
+        // return response()->json([
+        //     "success"=>true,
+        //     "data"=>$jobCard
+        // ]);
+
  
         return Inertia::render('FruitCollection/NurseryTransport', [
             'Jobcard' => $jobCard,
@@ -480,10 +486,7 @@ class FruitCollectionController extends Controller
 //         ]);
 //     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
 //     public function updateTruckDepartureTime(Request $request)
 //     {
 //         $data = $request->validate([
@@ -577,7 +580,7 @@ class FruitCollectionController extends Controller
         Stock::create([
             'fruit_id' => $fruit->id,
             // not there
-            // 'truck_id' => $data['truck_number'],
+            'truck_id' => $data['truck_number'],
             'quantity' => $data['quantity'] ?? null,
             // ?? null, //up there
             'job_card_id' => $jobcard->id,

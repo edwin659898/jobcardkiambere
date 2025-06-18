@@ -126,22 +126,17 @@
                                     <label class="block mb-2 text-sm font-medium">Name</label>
                                     <input type="text" v-model="form.transport"
                                         class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-<<<<<<< HEAD
                                         placeholder="Name of the Person" required>
-=======
-                                        placeholder="NAME OF THE PERSON" required>
->>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+
                                 </div>
                                 <div class="pt-3">
                                     <label class="block mb-2 text-sm font-medium">Mode of Transport</label>
                                     <!-- <select v-model="form.name" -->
                                         <input type="text" v-model="form.name"
                                         class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-<<<<<<< HEAD
+
                                         placeholder="Donkey/Motor Bike/Vehicle/Worker" required>
-=======
-                                        placeholder="Donkey Cart/Motor Bike/Vehicle/Worker" required>
->>>>>>> cff589fa2ab7618103f76708abeb33527c8c5373
+
                                     <!-- </select> -->
                                 </div>
                                 <div class="text-xs text-red-600 mt-1" v-if="form.errors.name">{{ form.errors.name }}

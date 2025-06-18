@@ -112,11 +112,11 @@
                                                                 </Link>
                                                             </td> -->
                                                             <td>
-                                                                <form @submit.prevent="deleteUser(user.id)">
+                                                                <!-- <form @submit.prevent="deleteUser(user.id)">
                                                                     <button type="submit" title="Deactivate user">
                                                                     <i class="fas fa-trash text-red-500 hover:text-red-700 cursor-pointer"></i>
                                                                     </button>
-                                                                </form>
+                                                                </form> -->
                                                             </td>
                                                             
                                                         </tr>
@@ -223,6 +223,23 @@ export default {
         }
     },
     methods: {
+
+        //    deactivate user
+
+//         async deleteUser(userId) {
+//     if (!confirm("Are you sure you want to deactivate this user?")) return;
+
+//     try {
+//       await axios.post(`/api/users/${userId}/deactivate`);
+//       alert("User deactivated successfully.");
+//       // Optionally refresh user list
+//       this.fetchUsers();
+//     } catch (error) {
+//       console.error(error);
+//       alert("Failed to deactivate user.");
+//     }
+//   },
+
         searchUser() {
             this.$inertia.get('/manage/user/roles',
              { search: this.search, }, { preserveState: true, replace: true })
@@ -246,6 +263,7 @@ export default {
                 });
             }
         },
+
     }
 }
 

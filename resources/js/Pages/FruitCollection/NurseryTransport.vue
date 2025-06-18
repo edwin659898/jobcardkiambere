@@ -71,6 +71,8 @@
                                                                     class="w-full py-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                                                                     v-model="form.truck_number"
                                                                     placeholder="Truck Number">
+                                                                                                                                                                        <!-- <pre>{{ JSON.stringify(stock, null, 2) }}</pre> -->
+
                                                                     <option v-for="$option in $page.props.Trucks"
                                                                         :key="$option.id" :value="$option.id">
                                                                         {{ $option.truck_number }} - {{ $option.description }}
@@ -121,6 +123,7 @@
                                                                             <td>
                                                                             <ol class="flex justify-between" v-for="(stock, index) in fruit.stocks"
                                                                                 :key="index">
+                                                                                <!-- <pre>{{ JSON.stringify(stock, null, 2) }}</pre> -->
                                                                                 
                                                                                 <li>
                                                                                     <p>{{ stock.truck.truck_number }} - {{ stock.truck.description }}</p>

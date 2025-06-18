@@ -91,9 +91,9 @@
                                                                        <th>Bad(Kgs)</th>
                                                                         <!-- <th>Nuts (Kgs)</th> -->
                                                                         <!--to be retuned after the meeting-->
-                                                                        <!-- <th>Means of Transport</th> -->
-                                                                        <!-- <th>starting Time</th> -->
-                                                                        <!-- <th>Ending Time</th> -->
+                                                                         <th>Means of Transport</th> 
+                                                                        <th>starting Time</th> 
+                                                                         <th>Ending Time</th> 
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -113,20 +113,19 @@
                                                                         
                                                                              <!-- transport -->
                                                                         <td>
-                                                                            <!-- {{ stock.truck.truck_number }} -->
-                                                                             -
-                                                                              <!-- {{ stock.truck.description }} -->
+                                                                            {{ stock.transport }} <br>- {{ stock.description }}
+                                                                             <!--{{ stock.truck.truck_number }} - {{ stock.truck.description }} -->
                                                                         </td>
                                                                           <!-- time aspect -->
                                                                         <td>
                                                                             <!-- {{ stock.quantity }} -->
                                                                             <!--to be retuned after the meeting-->
-                                                                            <!-- {{ format_date (activity.timelines[0].updated_at) }} -->
+                                                                             {{ format_date (activity.timelines[0].updated_at) }} 
                                                                         </td>
                                                                         <td>
                                                                             <!-- {{ stock.damage_seed }} -->
                                                                             <!--to be retuned after the meeting-->
-                                                                            <!-- {{ format_date (activity.timelines[0].created_at) }} -->
+                                                                             {{ format_date (activity.timelines[0].created_at) }} 
                                                                         </td>                                                                        
                                                                     </tr>
                                                                 </tbody>
@@ -140,13 +139,12 @@
                                                                 <thead>
                                                                     <tr>
                                                                         <th>No</th>
-                                                                        <th>Name</th>
+                                                                        <th>Name/Tree/Seed Bed Number</th>
                                                                         <th>Quantity</th>
                                                                         <th>UOM</th>
                                                                         <th>Area</th>
                                                                         <!--  -->
-                                                                        <th>Seed Bed Number</th>
-                                                                        <th>Tree Number</th>
+                                                                        <!--<th>Seed Bed Number</th>-->
                                                                         <th>Tree Quantity</th>
                                                                         <!--  -->
                                                                         <th>Starting time</th>
@@ -157,14 +155,15 @@
                                                                     <tr v-for="(comp, index) in activity.bed_preparation"
                                                                         :key="index">
                                                                         <td>{{ index + 1 }}</td>
+                                                                        <!-- <td>{{ comp.tree.tree_number }}</td> -->
                                                                         <td>{{ comp.name }}</td>
                                                                         <td>{{ comp.quantity }}</td>
                                                                         <td>{{ comp.uom }}</td>
                                                                         <td>{{ comp.area_amount }}</td>
                                                                         <!-- 3 -->
-                                                                        <td>{{ comp.seed_bed_name }}</td>
-                                                                        <td>{{ comp.tree_number_name }}</td>
+                                                                        <!--<td>{{ comp.seed_bed_name }}</td>-->
                                                                         <td>{{ comp.tree_number_uom }}</td>
+                                                                        <!-- <td>{{ comp.tree_number }}</td> -->
                                                                         <!-- 3 -->
                                                                         <td>{{ format_date (comp.created_at )}}</td>
                                                                         <td>{{ format_date (comp.updated_at) }}</td>

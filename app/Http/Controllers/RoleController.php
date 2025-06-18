@@ -249,11 +249,14 @@ class RoleController extends Controller
 
 
 
-    public function destroy($id)
-{
-    $user = User::findOrFail($id);
-    $user->delete(); // Or soft delete if using SoftDeletes
-    return redirect()->back()->with('success', 'User deactivated successfully.');
-}
+    // public function deactivate($id)
+    // {
+    //     $user = User::findOrFail($id);
+    //     $user->is_active = false; // Or status = 'inactive', depending on your DB structure
+    //     $user->save();
+    
+    //     return response()->json(['message' => 'User deactivated successfully']);
+    // }
+    
 
 }

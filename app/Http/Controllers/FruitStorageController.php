@@ -8,6 +8,7 @@ use App\Models\JobCard;
 use App\Models\ParentActivity;
 use App\Models\Signature;
 use App\Models\Stock;
+use App\Models\StockStatusProduct;
 use App\Models\StockControl;
 use App\Models\Timeline;
 use App\Models\Tree;
@@ -170,10 +171,13 @@ class FruitStorageController extends Controller
     //store data for quality check at nursery
     public function StoreQualityCheckAtNursery(Request $request, $id)
     {
-        $data = $request->validate([
-            'quantityOk' => 'required',
-            'quantityNotOk' => 'required',
-        ]);
+   
+      
+        // $data = $request->validate([
+        //     'quantityOk' => 'required',
+        //     'quantityNotOk' => 'required',
+        // ]);
+     
 
         $fruit = Fruit::findOrFail($id);
 
@@ -192,16 +196,49 @@ class FruitStorageController extends Controller
             ]);
         }
 
+        //if child_activity_id and  job_card_id and fruit_id exists with 
+
+        $stockExists=$this->stockExists($fruit->id, $jobcard->id, Session::get('current_activity_id') );
+
+        if($stockExists){
+
+            $stockExists->update([
+                'quantity' => $request->quantityOk,
+                'damage_seed' => $request->quantityNotOk,
+                'is_stock_updated'=>true,
+            ]);
+            return redirect()->back()->with('success', 'Update Successfully');
+
+        }
+
+        
         Stock::create([
             'fruit_id' => $fruit->id,
             'quantity' => $request->quantityOk,
             'damage_seed' => $request->quantityNotOk,
             'job_card_id' => $jobcard->id,
+            'updated_at'=>null,
             'child_activity_id' => Session::get('current_activity_id')
         ]);
 
         return redirect()->back()->with('success', 'Update Successfully');
     }
+
+    public function stockExists($fruit_id, $job_card_id, $child_activity_id){
+
+            return Stock::where('fruit_id', $fruit_id)
+            ->where('job_card_id', $job_card_id)
+            ->where('child_activity_id', $child_activity_id)
+            ->where('is_stock_updated', false)
+            ->first();
+
+    }
+
+    public function trial(){
+
+    }
+
+
 
     //sign for quality check by all Activity owners
     public function signQualityCheck(Request $request, $id)

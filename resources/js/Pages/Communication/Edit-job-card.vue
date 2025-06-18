@@ -61,7 +61,7 @@
 
                                                         <div class="flex flex-col justify-between">
 
-                                                            <div class="flex justify-center">
+                                                            <!-- <div class="flex justify-center">
                                                                 <div class="block bg-white text-center">
                                                                     <div class="py-3 px-6 border-b border-gray-300">
                                                                         Documents Required
@@ -104,9 +104,8 @@
                                                                                 placeholder="Document Location">
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                            </div>
-
+                                                                </div>                                                            
+                                                            </div> -->
                                                             <div class="flex justify-center">
                                                                 <div class="block bg-white max-w-sm text-center">
                                                                     <div class="py-2 px-6 border-b border-gray-300">

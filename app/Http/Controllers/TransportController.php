@@ -33,6 +33,7 @@ class TransportController extends Controller
             'name' => 'required',
             'site' => 'required',
             'description' => 'required',
+            'phone' => 'required'
         ]);
 
         Truck::create([
@@ -40,6 +41,7 @@ class TransportController extends Controller
             'truck_number' => $request->name,
             'description' => $request->description,
             'site' => $request->site,
+            'phone'=> $request->phone,
         ]);
 
         return redirect()->back()->with('success', 'Transport Media  created Successfully');

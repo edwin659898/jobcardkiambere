@@ -16,6 +16,11 @@ class JobCard extends Model
         return $this->belongsToMany(Record::class)->withPivot('location', 'child_activity_id')->using(JobCardRecord::class)->withTimestamps();
     }
 
+    public function truck()
+    {
+        return $this->hasMany(Truck::class, 'site', 'site');
+    }
+
     public function signatures()
     {
         return $this->hasMany(Signature::class);

@@ -144,7 +144,7 @@
                                                                                     $role.role
                                                                             }}</label>
 
-                                                                            <select v-model="form.site"
+                                                                            <!-- <select v-model="form.site"
                                         class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                         placeholder="Select your role and Tick the box" required>
                                         <option value="Managing Director">Managing Director</option>
@@ -157,7 +157,7 @@
                                         <option value="Monitoring and Evaluation Officer">Monitoring and Evaluation Officer</option>
                                         <option value="Information & Security officer">Information & Security officer</option>
                                         <option value="Agro-Forestry Agents">Agro-Forestry Agents</option>
-                                    </select>
+                                    </select> -->
                                                                 
                                                                         </div>
                                                                     </div>
