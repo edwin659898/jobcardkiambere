@@ -115,6 +115,10 @@
                                                                             <i @click="click(fruit.id)"
                                                                                   class="fas fa-clock cursor-pointer text-green-500 hover:text-green-800"> 
                                                                              </i>
+
+                                                                             <!-- <i @click="showStartSortingPopup(fruit.id)"
+                                                                                  class="fas fa-clock cursor-pointer text-green-500 hover:text-green-800"> 
+                                                                             </i> -->
                                                                         </td>
 
                                                                         <!-- start -->
@@ -212,6 +216,44 @@
             <!-- /.content -->
         </div>
 
+
+
+         <!-- Start Sorting Popup Modal -->
+        <div v-if="showPopup" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+            <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+                <div class="mt-3 text-center">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+                        <i class="fas fa-clock text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg leading-6 font-medium text-gray-900 mt-2">Start Sorting?</h3>
+                    <div class="mt-2 px-7 py-3">
+                        <p class="text-sm text-gray-500">
+                            Are you ready to start the sorting process for this item?
+                        </p>
+                        <p class="text-xs text-gray-400 mt-2">
+                            Current time: {{ getCurrentDateTime() }}
+                        </p>
+                    </div>
+                    <div class="items-center px-4 py-3">
+                        <button 
+                            @click="confirmStartSorting" 
+                            :disabled="form.processing"
+                            :class="{ 'opacity-25': form.processing }"
+                            class="px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-24 mr-2 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300">
+                            {{ form.processing ? 'Starting...' : 'Yes' }}
+                        </button>
+                        <button 
+                            @click="cancelStartSorting" 
+                            :disabled="form.processing"
+                            class="px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md w-24 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of sorting moduel -->
+
     </BreezeAuthenticatedLayout>
 </template>
 
@@ -235,6 +277,10 @@ export default {
             form: this.$inertia.form({
                 quantity: null,
                 SelectedId: null,
+                 end_date: '',
+                start_date: null,
+                start: null,
+                start_time: null,
             }),
             SelectedOne: false,
             start_date: this.$props.BeginDate,
@@ -268,6 +314,27 @@ export default {
             this.form.quantity = null;
             this.SelectedOne = true;
             this.form.SelectedId = id;
+        },
+        showStartSortingPopup(id) {
+            this.pendingFruitId = id;
+            this.showPopup = true;
+        },
+        confirmStartSorting() {
+            this.form.start_time = new Date();
+            this.form.start = 1; 
+            this.form.SelectedId = this.pendingFruitId;
+            
+            this.update();
+            
+            this.showPopup = false;
+            this.pendingFruitId = null;
+        },
+        cancelStartSorting() {
+            this.showPopup = false;
+            this.pendingFruitId = null;
+        },
+        getCurrentDateTime() {
+            return new Date().toLocaleString();
         },
         click(id) {
             this.form.start = null;

@@ -31,6 +31,28 @@ class FruitStorageController extends Controller
         ]);
     }
 
+     public function FruitStorageFromTree($id)
+    {
+        $jobCard = $this->GetJobcard($id);
+        $start_date = $this->GetDate($id);
+
+        return Inertia::render('FruitStorage/QuantityCheck', [
+            'Jobcard' => $jobCard,
+            'BeginDate' => $start_date
+        ]);
+    }
+     public function FruitSorting($id)
+    {
+
+        $jobCard = $this->GetJobcard($id);
+        $start_date = $this->GetDate($id);
+
+        return Inertia::render('FruitStorage/QuantityCheck', [
+            'Jobcard' => $jobCard,
+            'BeginDate' => $start_date
+        ]);
+    }
+
     //check jobcards available in specific activity
     public function ChildActivity($id)
     {
@@ -171,13 +193,13 @@ class FruitStorageController extends Controller
     //store data for quality check at nursery
     public function StoreQualityCheckAtNursery(Request $request, $id)
     {
-   
-      
+
+
         // $data = $request->validate([
         //     'quantityOk' => 'required',
         //     'quantityNotOk' => 'required',
         // ]);
-     
+
 
         $fruit = Fruit::findOrFail($id);
 
@@ -196,7 +218,7 @@ class FruitStorageController extends Controller
             ]);
         }
 
-        //if child_activity_id and  job_card_id and fruit_id exists with 
+        //if child_activity_id and  job_card_id and fruit_id exists with
 
         $stockExists=$this->stockExists($fruit->id, $jobcard->id, Session::get('current_activity_id') );
 
@@ -211,7 +233,7 @@ class FruitStorageController extends Controller
 
         }
 
-        
+
         Stock::create([
             'fruit_id' => $fruit->id,
             'quantity' => $request->quantityOk,
@@ -306,12 +328,12 @@ class FruitStorageController extends Controller
      {
         $jobCard = $this->GetJobcard($id);
         $start_date = $this->GetDate($id);
- 
+
          $signed = Signature::where([
              'job_card_id' => $jobCard->id,
              'child_activity_id' => Session::get('current_activity_id')
          ])->pluck('role_id')->toArray();
- 
+
          return Inertia::render('FruitStorage/StorageAfterDisinfection', [
              'Jobcard' => $jobCard,
              'BeginDate' => $start_date,

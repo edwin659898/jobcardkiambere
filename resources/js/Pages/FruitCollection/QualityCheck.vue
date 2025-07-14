@@ -274,6 +274,7 @@
                 </div>
             </div>
         </div>
+        <!-- end of sorting moduel -->
 
     </BreezeAuthenticatedLayout>
 </template>
@@ -309,6 +310,7 @@ export default {
                 start_time: null, 
             }),
             SelectedOne: false,
+            // start_date: this.$props.BeginDate,
             sign: {
               signatures: this.$props.Signed,
             },
