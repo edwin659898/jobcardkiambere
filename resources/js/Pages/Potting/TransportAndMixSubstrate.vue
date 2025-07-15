@@ -138,8 +138,8 @@
                                                                 <thead>
                                                                     <tr>
                                                                         <th>No</th>
-                                                                        <th>Soil Quantity</th>
-                                                                        <th>Soil UOM</th>
+                                                                        <th>Sand Quantity</th>
+                                                                        <th>Sand UOM</th>
                                                                         <th>Top Soil Quantity</th>
                                                                         <th>Top Soil UOM</th>
                                                                         <th>Date</th>
@@ -236,7 +236,7 @@ export default {
         return {
             form: this.$inertia.form({
                 start_date: this.$props.BeginDate,
-                soil: 'Soil',
+                soil: 'Sand',
                 soil_uom: '',
                 soil_quantity: '',
                 top_soil: 'Top Soil',

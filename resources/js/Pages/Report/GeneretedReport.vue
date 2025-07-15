@@ -180,7 +180,15 @@
                                                                 <p class="text-gray-700 text-xs mb-2"> All Documents</p>
                                                                 <!-- <p class="text-gray-400">Email: BUHBUHBUH<br>Meeting Minutes: BUHBUHBUH<br>Work Plans: BUHBUHBUH<br>Budgets: BUHBUHBUH<br></p> -->
 
-                                                                <p class="text-gray-400">{{ activity.timelines[0].sign_time }} </p>
+                                                                <!-- <p class="text-gray-400">{{ activity.timelines[0].sign_time }} </p> -->
+                                                                <div v-for="(record, index) in activity.records"
+                                                                    :key="index">
+                                                                    <p class="text-gray-400" v-html="record.record"></p>
+                                                                </div>
+                                                                <!-- <div v-for="(record, index) in activity.records.filter(r => r.child_activity_id === activity.id)"
+                                                                    :key="index">
+                                                                    <p class="text-gray-400" v-html="record.record"></p>
+                                                                </div> -->
 
                                                                 <div v-for="$record in activity.record"
                                                                     :key="$record.id">
